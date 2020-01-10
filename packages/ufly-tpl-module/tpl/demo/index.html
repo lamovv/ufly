@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Demo</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<style>
+html,body { margin: 0; padding: 0; height: 100vh;}
+body {
+    padding: .2rem;
+    font-family: -apple-system, 'Helvetica', 'Hiragino Sans GB W3', arial, sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+button {
+    margin-top: .12rem;
+    padding: .12rem;
+    font-size: .26rem;
+    color: #fff;
+    box-sizing: border-box;
+    border: 0;
+    outline: none;
+    border-radius: .12rem;
+    background: #1890ff;
+}
+button:hover{
+    background: #40a9ff;
+}
+button:active {
+    background:#096dd9;
+}
+</style>
+<script>
+var screenWidth = window.screen.width;
+var uiWidth = 750;
+document.documentElement.style.fontSize = (screenWidth / uiWidth) * 100 + 'px';
+document.documentElement.style.lineHeight = 0;
+</script>
+</head>
+<body data-noaplus="true">
+<h1>{{name}}</h1>
+
+<button data-action="{{name}}">{{name}}</button>
+
+<script src="../dist/demo/index.js"></script>
+
+</body>
+</html>

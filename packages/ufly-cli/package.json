@@ -1,0 +1,48 @@
+{
+  "name": "ufly-cli",
+  "version": "0.0.0",
+  "description": "主 command-line interface",
+  "bin": {
+    "ufly": "bin/cli"
+  },
+  "no-optional": "true",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "keywords": [
+    "ufly"
+  ],
+  "author": "lamovv <lamovv@gmail.com>",
+  "homepage": "https://github.com/lamovv/ufly",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lamovv/ufly.git"
+  },
+  "scripts": {
+    "debug": "node --inspect-brk ./lib/cmd/init.js"
+  },
+  "bugs": {
+    "url": "https://github.com/lamovv/ufly/issues"
+  },
+  "dependencies": {
+    "chalk": "~3.0.0",
+    "fs-extra": "~8.1.0",
+    "inquirer": "~7.0.1",
+    "ora": "~4.0.3",
+    "shelljs": "~0.8.3",
+    "ufly-tpl-loader": "^0.1.1",
+    "ufly-tpl-module": "^0.1.1",
+    "ufly-util": "^0.1.1",
+    "update-notifier": "~4.0.0",
+    "yargs": "~15.0.2"
+  }
+}
