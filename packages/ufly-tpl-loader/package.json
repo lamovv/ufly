@@ -24,6 +24,6 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "ufly-npm": "^0.1.1"
+    "ufly-npm": "^0.1.0"
   }
 }
