@@ -1,6 +1,6 @@
 {
   "name": "ufly-tpl-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "> TODO: description",
   "author": "lamovv <lamovv@gmail.com>",
   "homepage": "https://github.com/lamovv/ufly#readme",
@@ -24,6 +24,6 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "ufly-npm": "^0.1.0"
+    "ufly-npm": "^0.1.2"
   }
 }

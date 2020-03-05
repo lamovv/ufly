@@ -1,6 +1,6 @@
 {
   "name": "ufly-tpl-module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Templates for creating templates",
   "keywords": [
     "tpl",
@@ -36,7 +36,7 @@
     "fs-extra": "~8.1.0",
     "handlebars": "^4.5.3",
     "metalsmith": "^2.3.0",
-    "ufly-shell": "^0.1.1",
+    "ufly-shell": "^0.1.2",
     "ufly-util": "^0.1.0"
   }
 }

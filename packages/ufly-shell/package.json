@@ -1,6 +1,6 @@
 {
   "name": "ufly-shell",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "shelljs相关操作",
   "keywords": [
     "shelljs"
@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "shelljs": "^0.8.3",
-    "ufly-git": "^0.1.0"
+    "ufly-git": "^0.1.2"
   }
 }
