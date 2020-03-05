@@ -15,7 +15,10 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "tpl",
+    "package.json",
+    "README.md"
   ],
   "repository": {
     "type": "git",
