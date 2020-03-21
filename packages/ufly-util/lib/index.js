@@ -1,4 +1,5 @@
 'use strict';
+exports.getUserHome = () => process.env[process.platform=='win32' ? 'USERPROFILE' : 'HOME'];
 
 const getStackTrace = () => {
   let obj = {};

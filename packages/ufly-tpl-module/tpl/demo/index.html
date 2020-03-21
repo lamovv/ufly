@@ -5,31 +5,12 @@
 <title>Demo</title>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
 <style>
-html,body { margin: 0; padding: 0; height: 100vh;}
-body {
-    padding: .2rem;
-    font-family: -apple-system, 'Helvetica', 'Hiragino Sans GB W3', arial, sans-serif;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-}
-button {
-    margin-top: .12rem;
-    padding: .12rem;
-    font-size: .26rem;
-    color: #fff;
-    box-sizing: border-box;
-    border: 0;
-    outline: none;
-    border-radius: .12rem;
-    background: #1890ff;
-}
-button:hover{
-    background: #40a9ff;
-}
-button:active {
-    background:#096dd9;
-}
+    html,body { margin: 0; padding: 0; height: 100vh;}
+    body { padding: .2rem; font-family: -apple-system, 'Helvetica', 'Hiragino Sans GB W3', arial, sans-serif;background-color: #fff;display: flex; flex-direction: column;}
+    h1{ font-size: .6rem; text-align: center; margin-bottom: 1rem;}
+    button {margin-top: .12rem;padding: .12rem;font-size: .26rem;color: #fff;box-sizing: border-box;border: 0;outline: none;border-radius: .12rem;background: #1890ff;}
+    button:hover{background: #40a9ff;}
+    button:active { background:#096dd9;}
 </style>
 <script>
 var screenWidth = window.screen.width;
@@ -39,11 +20,10 @@ document.documentElement.style.lineHeight = 0;
 </script>
 </head>
 <body data-noaplus="true">
-<h1>{{name}}</h1>
+    <h1>{{name}}</h1>
 
-<button data-action="{{name}}">{{name}}</button>
+    <button data-action="{{name}}">{{name}}</button>
 
 <script src="../dist/demo/index.js"></script>
-
 </body>
 </html>

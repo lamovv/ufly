@@ -1,28 +1,25 @@
 'use strict';
-
 const path = require('path');
 const pkg = require('./package.json');
 const webpack = require('webpack');
+const ip = require('ip');
 
-module.exports = (isDev, beautify = false) => ({
-  mode: isDev ? 'development':'production',
-  devtool: isDev ? '#source-map' : false,
+module.exports = {
+  mode: 'development',
   context: __dirname,
-  //相对于context的路径
+  devtool: '#source-map',
+  // devtool: false,
   entry: {
-    index: './src/index.js',
-    'demo/index':'./demo/index.js'
+    'demo/index': './demo/index.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, '/dist'),
     publicPath: '/dist/',
     filename: '[name].js',
-    // 为动态加载的 Chunk 配置输出文件的名称
-    chunkFilename: '[name].[hash:6].js',
     libraryTarget: 'umd',
-    library: '{{name}}',
+    library: pkg.name,
     libraryExport: 'default',
-    umdNamedDefine: true
+    umdNamedDefine: true,
   },
   stats: {
     env: true,
@@ -35,40 +32,52 @@ module.exports = (isDev, beautify = false) => ({
   module: {
     rules: [
       {
-        test: /\.js$/i,
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            '@babel/preset-env'
-          ],
-          plugins: [
-            '@babel/plugin-proposal-object-rest-spread'
-          ]
-        }
+        test: /\.js/,
+        exclude: /node_modules|assembly/,
+        enforce: 'pre',
+        use: 'eslint-loader',
+      },
+      {
+        test: /\.js$/,
+        // exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: [
+                '@babel/plugin-syntax-dynamic-import',
+                '@babel/plugin-proposal-object-rest-spread',
+                '@babel/plugin-proposal-class-properties'
+              ],
+            },
+          },
+        ],
       }
-    ]
+    ],
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+  watchOptions: {
+    ignored: /node_modules/,
+    // poll: 1000
+  },
+  devServer: {
+    //允许手机绑定本地代理服务后访问，
+    host: `${ip.address()}`,
+    contentBase: [
+      'dist',
+      'demo',
+    ],
+    hot: true
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.js', '.ts'],
     modules: ['node_modules'],
     mainFields:['module', 'main'],
     alias: {
       '{{name}}': path.resolve('./src/index')
     }
-  },
-  plugins:[
-    new webpack.DefinePlugin({
-      '__VERSION__': JSON.stringify(pkg.version)
-    })
-  ].concat(isDev ? [new webpack.HotModuleReplacementPlugin()]
-    : beautify ? [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          mangle: false,
-          output: {
-            beautify: true,
-          },
-        }
-      })]: []
-  )
-})
+  }
+};

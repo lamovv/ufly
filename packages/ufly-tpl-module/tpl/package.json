@@ -2,47 +2,50 @@
   "name": "{{name}}",
   "version": "{{version}}",
   "description": "{{description}}",
+  "keywords": [
+    "{{keywords}}"
+  ],
   "main": "dist/index.js",
   "module": "dist/es/index.js",
-  "scripts": {
-    "build": "rollup -c"
-  },
   "files": [
     "dist",
     "README.md",
     "package.json"
   ],
-  "author": "{{author}} <{{email}}>",
+  "author": "{{author}}<{{email}}>",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "http://registry.npm.alibaba-inc.com"
+  "repository": {
+    "type": "git",
+    "url": "{{repository}}"
   },
   "devDependencies": {
-    "@ali/console": "~1.0.0",
-    "@ali/grunt-devserver": "~0.6.5",
-    "@babel/core": "~7.7.7",
-    "@babel/plugin-external-helpers": "~7.2.0",
-    "@babel/plugin-proposal-object-rest-spread": "~7.7.7",
-    "@babel/preset-env": "~7.7.7",
-    "babel-eslint": "~8.2.6",
-    "babel-loader": "~8.0.6",
-    "clam-util": "~0.1.17",
-    "eslint-import-resolver-webpack": "~0.10.1",
-    "eslint-plugin-import": "~2.13.0",
-    "grunt": "~1.0.4",
-    "grunt-contrib-clean": "~1.1.0",
-    "grunt-eslint": "~20.1.0",
-    "grunt-exec": "~3.0.0",
-    "grunt-webpack": "~3.1.2",
-    "jit-grunt": "~0.10.0",
-    "lodash": "~4.17.15",
-    "rollup": "~1.27.14",
-    "rollup-plugin-babel": "~4.3.3",
-    "rollup-plugin-commonjs": "~10.1.0",
-    "rollup-plugin-node-resolve": "~5.2.0",
-    "rollup-plugin-replace": "~2.2.0",
-    "time-grunt": "~1.4.0",
-    "webpack": "~4.41.5",
-    "webpack-dev-server": "~3.10.1"
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@rollup/plugin-alias": "^3.0.1",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "console-log-h5": "^1.0.6",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "lodash": "^4.17.15",
+    "ip": "^1.1.5",
+    "rollup": "^2.1.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --watch",
+    "dev:open": "webpack-dev-server --watch --open",
+    "build": "rollup -c",
+    "pub": "npm run build && npm publish"
   }
 }

@@ -12,5 +12,6 @@
   "version": "0.1.2",
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
-  }
+  },
+  "lerna": "2.11.0"
 }

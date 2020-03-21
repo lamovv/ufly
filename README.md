@@ -10,7 +10,7 @@
   2. 模板内部处理好文件读入内存操作，方便fly调用时，直接输入配置编译模板，生成项目。
 
 ## Note
-- 全局安装lerna@3：`tnpm i -g lerna@3`，方便使用lerna 相关命令工具。本项目内安装lerna@2，用于 `tnpm` 发包，因lerna@3 不支持`npmClient`配置。
+- 全局安装lerna@3：`tnpm i -g lerna@3`，方便使用lerna 相关命令工具。本项目内安装lerna@2，用于 `npm` 发包，因lerna@3 不支持`npmClient`配置。
 - 子命令及参数定义：Yargs
 - 用户输入交互：Inquirer
 - spinner：ora

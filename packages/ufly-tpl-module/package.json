@@ -1,7 +1,7 @@
 {
   "name": "ufly-tpl-module",
   "version": "0.1.2",
-  "description": "Templates for creating templates",
+  "description": "Templates for create esm",
   "keywords": [
     "tpl",
     "module"
@@ -23,9 +23,6 @@
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/lamovv/ufly.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/lamovv/ufly/issues"
