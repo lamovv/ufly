@@ -1,6 +1,6 @@
 {
   "name": "ufly-cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "主 command-line interface",
   "bin": {
     "ufly": "bin/cli"
@@ -40,8 +40,8 @@
     "ora": "~4.0.3",
     "shelljs": "~0.8.3",
     "ufly-tpl-loader": "^0.1.2",
-    "ufly-tpl-module": "^0.1.2",
-    "ufly-util": "^0.1.0",
+    "ufly-tpl-module": "^0.1.3",
+    "ufly-util": "^0.1.3",
     "update-notifier": "~4.0.0",
     "yargs": "~15.0.2"
   }
