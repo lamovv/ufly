@@ -1,8 +1,8 @@
 'use strict';
-const path = require('path');
-const pkg = require('./package.json');
-const webpack = require('webpack');
 const ip = require('ip');
+const path = require('path');
+const webpack = require('webpack');
+const pkg = require('./package.json');
 
 const isProd = process.env.NODE_ENV != 'development';
 
