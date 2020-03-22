@@ -50,7 +50,7 @@
     "build:umd": "cross-env NODE_ENV=production webpack --mode=production",
     "clean": "rm -rf dist",
     "dev": "webpack-dev-server --watch --mode=development",
-    "dev:open": "webpack-dev-server --watch --open",
+    "dev:open": "webpack-dev-server --watch --mode=development --open",
     "postversion": "git push --follow-tags",
     "push": "sh ./publish.sh -pm",
     "pub": "npm run build:esm && sh ./publish.sh -npm"
