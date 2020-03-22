@@ -1,11 +1,7 @@
 # `ufly-tpl-loader`
 
-> TODO: description
+> ufly-cli，配套装载 module tpl 的 loader
 
 ## Usage
-
-```
-const uflyTplLoader = require('ufly-tpl-loader');
-
-// TODO: DEMONSTRATE API
-```
+1. 安装cli：`$ npm i -g ufly-cli`
+2. 创建module：`$ ufly init`

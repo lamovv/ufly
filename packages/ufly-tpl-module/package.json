@@ -1,7 +1,7 @@
 {
   "name": "ufly-tpl-module",
   "version": "0.1.3",
-  "description": "Templates for create esm",
+  "description": "> ufly-cli，配套创建 module 的 tpl",
   "keywords": [
     "tpl",
     "module"
@@ -16,9 +16,7 @@
   },
   "files": [
     "lib",
-    "tpl",
-    "package.json",
-    "README.md"
+    "tpl"
   ],
   "repository": {
     "type": "git",

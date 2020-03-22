@@ -1,13 +1,13 @@
-# ufly
-> Use the fly command line tool to quickly create modules and projects into development.
+# `ufly-cli`
+> Use the ufly command line tool to quickly create modules and app for dev.
 
-
-## 概要
-1. 自动检查更新
+## Usage
+1. 安装cli：`$ npm i -g ufly-cli`
+2. 创建module或app：`$ ufly init`
 
 ## 架构
 - 通过lerna进行多包管理开发
-- 模板，命名以`tpl`作为前缀，`tpl-${typeName}`
+- 模板，命名以`tpl`作为前缀，`ufly-tpl-${typeName}`
   1. 每个类型的模板，单独封装成npm包，提供依赖
   2. 模板内部处理好文件读入内存操作，方便fly调用时，直接输入配置编译模板，生成项目。
 

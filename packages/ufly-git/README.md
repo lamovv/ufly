@@ -1,11 +1,7 @@
 # `ufly-git`
 
-> TODO: description
+> ufly-cli，配套 git 工具包
 
 ## Usage
-
-```
-const uflyGit = require('ufly-git');
-
-// TODO: DEMONSTRATE API
-```
+1. 安装cli：`$ npm i -g ufly-cli`
+2. 创建module：`$ ufly init`

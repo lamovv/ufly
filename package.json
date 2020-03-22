@@ -3,5 +3,9 @@
   "private": true,
   "devDependencies": {
     "lerna": "2.11.0"
+  },
+  "scripts": {
+    "init": "ayarn --ignore-scripts && lerna bootstrap",
+    "clean": "rm -rf node_modules yarn.lock && lerna clean -y"
   }
 }

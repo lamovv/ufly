@@ -1,7 +1,7 @@
 {
   "name": "ufly-shell",
   "version": "0.1.2",
-  "description": "shelljs相关操作",
+  "description": "> ufly-cli，配套 shell 工具包",
   "keywords": [
     "shelljs"
   ],

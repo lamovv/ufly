@@ -1,11 +1,7 @@
 # `ufly-npm`
 
-> TODO: description
+> ufly-cli，配套 npm 工具包
 
 ## Usage
-
-```
-const uflyNpm = require('ufly-npm');
-
-// TODO: DEMONSTRATE API
-```
+1. 安装cli：`$ npm i -g ufly-cli`
+2. 创建module：`$ ufly init`

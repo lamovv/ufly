@@ -1,7 +1,7 @@
 {
   "name": "ufly-tpl-loader",
   "version": "0.1.2",
-  "description": "> TODO: description",
+  "description": "> ufly-cli，配套装载 module tpl 的 loader",
   "author": "lamovv <lamovv@gmail.com>",
   "homepage": "https://github.com/lamovv/ufly#readme",
   "license": "MIT",

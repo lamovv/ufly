@@ -1,7 +1,7 @@
 {
   "name": "ufly-npm",
   "version": "0.1.2",
-  "description": "> TODO: description",
+  "description": "> ufly-cli，配套 npm 工具包",
   "keywords": [
     "npm",
     "opr"

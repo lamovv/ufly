@@ -1,11 +1,7 @@
 # `ufly-tpl-module`
 
-> TODO: description
+> ufly-cli，配套创建 module 的 tpl
 
 ## Usage
-
-```
-const uflyTplModule = require('ufly-tpl-module');
-
-// TODO: DEMONSTRATE API
-```
+1. 安装cli：`$ npm i -g ufly-cli`
+2. 创建module：`$ ufly init`

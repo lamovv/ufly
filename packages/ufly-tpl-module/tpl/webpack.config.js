@@ -22,12 +22,7 @@ module.exports = {
     umdNamedDefine: true,
   },
   stats: {
-    env: true,
-    errors: true,
     modules: false,
-    performance: true,
-    source: true,
-    version: false,
   },
   module: {
     rules: [
@@ -39,13 +34,17 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        // exclude: /node_modules/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
               plugins: [
+                ['@babel/plugin-transform-runtime', {
+                  // 开启后，关闭commonjs方式，以esm方式引入helpers函数
+                  // useESModules: true,  //默认false
+                }],
                 '@babel/plugin-syntax-dynamic-import',
                 '@babel/plugin-proposal-object-rest-spread',
                 '@babel/plugin-proposal-class-properties'
