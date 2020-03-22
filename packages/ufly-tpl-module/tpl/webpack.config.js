@@ -4,10 +4,11 @@ const pkg = require('./package.json');
 const webpack = require('webpack');
 const ip = require('ip');
 
+const isProd = process.env.NODE_ENV != 'development';
+
 module.exports = {
-  mode: 'development',
   context: __dirname,
-  devtool: '#source-map',
+  devtool: isProd ? 'cheap-module-source-map':'source-map', //cheap-module-eval-source-map
   // devtool: false,
   entry: {
     'demo/index': './demo/index.js',
