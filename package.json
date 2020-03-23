@@ -2,10 +2,17 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "2.11.0"
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "eslint": "^6.8.0",
+    "esprima": "^4.0.1",
+    "husky": "^4.2.3",
+    "lerna": "2.11.0",
+    "lint-staged": "^10.0.8"
   },
   "scripts": {
     "init": "ayarn --ignore-scripts && lerna bootstrap",
-    "clean": "rm -rf node_modules yarn.lock && lerna clean -y"
+    "clean": "rm -rf node_modules yarn.lock && lerna clean -y",
+    "pub": "lerna publish"
   }
 }

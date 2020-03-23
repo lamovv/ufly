@@ -1,4 +1,6 @@
 {
+  "npmClient": "yarn",
+  "version": "0.1.5",
   "packages": [
     "packages/*"
   ],
@@ -7,9 +9,13 @@
       "npmClientArgs": [
         "--no-package-lock"
       ]
+    },
+    "publish": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "exact": true
     }
   },
-  "version": "0.1.5",
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
   },
