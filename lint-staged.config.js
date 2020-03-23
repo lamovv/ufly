@@ -1,4 +1,6 @@
 module.exports = {
-  '*.js': ['eslint --fix', 'git add'],
-  '*.{json,md,css,ts}': ['git add'],
+  './packages/**/lib/*.js': [
+    'prettier --tab-width 2 --write', 
+    'eslint --fix'
+  ]
 };

@@ -2,6 +2,7 @@ const fse = require('fs-extra');
 const path = require('path');
 const ora = require('ora');
 
+const sh = require("ufly-shell");
 const tplLoader = require('ufly-tpl-loader');
 const tplModule = require('ufly-tpl-module');
 
@@ -31,17 +32,28 @@ module.exports = {
     const answers = Object.assign({}, answersPro, answersAuthor);
 
     const {
+      isCurrent, 
+      dirName,
       projectType: pType
     } = answers;
 
     const spinner = ora({color: 'green'}).start(`${pType} 创建中...`);
+    // 是否在当前目录创建项目，若否，需新建目录并进入新建目录
+    if (!isCurrent) {
+      const err = sh.dir.mkdir1cd(dirName);
+      if (err) {
+        return spinner.fail(
+          `${pType} 创建异常： ${err.code}-${err.message}`
+        );
+      }
+    }
 
     let err;
     switch (pType) {
       case 'module':
         err = await tplModule(answers);
         if(err){
-          return spinner.fail(`${pType} 创建异常，请重试。 ${err.code}-${err.message}`);
+          return spinner.fail(`${pType} 创建异常： ${err.code}-${err.message}`);
         }
         break;
       default:

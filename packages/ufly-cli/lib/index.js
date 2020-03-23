@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-const cmd = require('./cmd/index');
+const cmd = require("./cmd/index");
 
 function uflyCli() {
-    cmd();
+  cmd();
 }
 
 module.exports = uflyCli;

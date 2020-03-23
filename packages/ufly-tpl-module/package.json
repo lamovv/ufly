@@ -27,11 +27,9 @@
   },
   "dependencies": {
     "async": "^3.1.0",
-    "ejs": "~3.0.1",
     "fs-extra": "~8.1.0",
     "handlebars": "^4.5.3",
     "metalsmith": "^2.3.0",
-    "ufly-shell": "^0.1.5",
     "ufly-util": "^0.1.5"
   }
 }
