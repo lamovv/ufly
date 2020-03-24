@@ -18,7 +18,6 @@
     "clean": "rm -rf node_modules yarn.lock && lerna clean -y",
     "eslint": "eslint --init",
     "init": "ayarn --ignore-scripts && lerna bootstrap",
-    "precommit": "lint-staged",
     "pub": "lerna publish"
   }
 }

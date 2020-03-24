@@ -10,9 +10,9 @@
     "@babel/highlight" "^7.8.3"
 
 "@babel/generator@^7.9.0":
-  version "7.9.3"
-  resolved "https://registry.npm.alibaba-inc.com/@babel/generator/download/@babel/generator-7.9.3.tgz#7c8b2956c6f68b3ab732bd16305916fbba521d94"
-  integrity sha1-fIspVsb2izq3Mr0WMFkW+7pSHZQ=
+  version "7.9.4"
+  resolved "https://registry.npm.alibaba-inc.com/@babel/generator/download/@babel/generator-7.9.4.tgz#12441e90c3b3c4159cdecf312075bf1a8ce2dbce"
+  integrity sha1-EkQekMOzxBWc3s8xIHW/Gozi284=
   dependencies:
     "@babel/types" "^7.9.0"
     jsesc "^2.5.1"
@@ -57,9 +57,9 @@
     js-tokens "^4.0.0"
 
 "@babel/parser@^7.7.0", "@babel/parser@^7.8.6", "@babel/parser@^7.9.0":
-  version "7.9.3"
-  resolved "https://registry.npm.alibaba-inc.com/@babel/parser/download/@babel/parser-7.9.3.tgz#043a5fc2ad8b7ea9facddc4e802a1f0f25da7255"
-  integrity sha1-BDpfwq2Lfqn6zdxOgCofDyXaclU=
+  version "7.9.4"
+  resolved "https://registry.npm.alibaba-inc.com/@babel/parser/download/@babel/parser-7.9.4.tgz#68a35e6b0319bbc014465be43828300113f2f2e8"
+  integrity sha1-aKNeawMZu8AURlvkOCgwARPy8ug=
 
 "@babel/runtime@^7.8.7":
   version "7.9.2"
@@ -2146,9 +2146,9 @@ lines-and-columns@^1.1.6:
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
 lint-staged@^10.0.8:
-  version "10.0.8"
-  resolved "https://registry.npm.alibaba-inc.com/lint-staged/download/lint-staged-10.0.8.tgz#0f7849cdc336061f25f5d4fcbcfa385701ff4739"
-  integrity sha1-D3hJzcM2Bh8l9dT8vPo4VwH/Rzk=
+  version "10.0.9"
+  resolved "https://registry.npm.alibaba-inc.com/lint-staged/download/lint-staged-10.0.9.tgz#185aabb2432e9467c84add306c990f1c20da3cdb"
+  integrity sha1-GFqrskMulGfISt0wbJkPHCDaPNs=
   dependencies:
     chalk "^3.0.0"
     commander "^4.0.1"
@@ -2452,9 +2452,9 @@ minimist@~0.0.1:
   integrity sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8=
 
 mkdirp@^0.5.1, mkdirp@~0.5.0:
-  version "0.5.3"
-  resolved "https://registry.npm.alibaba-inc.com/mkdirp/download/mkdirp-0.5.3.tgz#5a514b7179259287952881e94410ec5465659f8c"
-  integrity sha1-WlFLcXklkoeVKIHpRBDsVGVln4w=
+  version "0.5.4"
+  resolved "https://registry.npm.alibaba-inc.com/mkdirp/download/mkdirp-0.5.4.tgz#fd01504a6797ec5c9be81ff43d204961ed64a512"
+  integrity sha1-/QFQSmeX7Fyb6B/0PSBJYe1kpRI=
   dependencies:
     minimist "^1.2.5"
 
@@ -2829,9 +2829,9 @@ prepend-http@^1.0.1:
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
 prettier@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npm.alibaba-inc.com/prettier/download/prettier-2.0.1.tgz#3f00ac71263be34684b2b2c8d7e7f63737592dac"
-  integrity sha1-PwCscSY740aEsrLI1+f2NzdZLaw=
+  version "2.0.2"
+  resolved "https://registry.npm.alibaba-inc.com/prettier/download/prettier-2.0.2.tgz#1ba8f3eb92231e769b7fcd7cb73ae1b6b74ade08"
+  integrity sha1-G6jz65IjHnabf818tzrhtrdK3gg=
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
