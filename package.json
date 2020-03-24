@@ -14,10 +14,8 @@
     "prettier": "^2.0.1"
   },
   "scripts": {
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "clean": "rm -rf node_modules yarn.lock && lerna clean -y",
-    "eslint": "eslint --init",
-    "init": "ayarn --ignore-scripts && lerna bootstrap",
+    "init": "yarn --ignore-scripts && lerna bootstrap",
     "pub": "lerna publish"
   }
 }

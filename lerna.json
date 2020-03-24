@@ -7,8 +7,7 @@
   "command": {
     "bootstrap": {
       "npmClientArgs": [
-        "--no-package-lock",
-        "--no-yarn-lock"
+        "--no-package-lock"
       ]
     },
     "publish": {
