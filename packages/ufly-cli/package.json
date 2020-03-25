@@ -1,6 +1,6 @@
 {
   "name": "ufly-cli",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "> Cli，Use the ufly command line tool to quickly create modules and app for dev.",
   "bin": {
     "ufly": "bin/cli"
@@ -45,7 +45,7 @@
     "shelljs": "~0.8.3",
     "ufly-shell": "^0.1.5",
     "ufly-tpl-loader": "^0.1.5",
-    "ufly-tpl-module": "0.1.6",
+    "ufly-tpl-module": "^0.1.7",
     "ufly-util": "^0.1.5",
     "update-notifier": "~4.0.0",
     "yargs": "~15.0.2"
