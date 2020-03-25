@@ -7,17 +7,17 @@
   "command": {
     "bootstrap": {
       "npmClientArgs": [
+        "--no-lockfile",
         "--no-package-lock"
       ]
     },
     "publish": {
+      "registry": "http://registry.npmjs.org",
+      "verifyRegistry": false,
+      "verifyAccess": false,
       "allowBranch": "master",
-      "conventionalCommits": true,
-      "exact": true
+      "conventionalCommits": true
     }
-  },
-  "publishConfig": {
-    "registry": "http://registry.npmjs.org"
   },
   "lerna": "2.11.0"
 }
