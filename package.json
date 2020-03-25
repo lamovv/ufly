@@ -17,6 +17,7 @@
     "clean": "rm -rf node_modules yarn.lock && lerna clean -y",
     "init": "npm run clean && yarn --ignore-scripts && lerna bootstrap --force-local",
     "pub": "lerna publish",
+    "pub:v": "lerna version --force-publish && lerna publish",
     "rebuild": "yarn install --force"
   }
 }
