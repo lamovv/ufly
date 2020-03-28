@@ -2,6 +2,6 @@
 
 const uflyTplModule = require('..');
 
-describe('ufly-tpl-module', () => {
+describe('ufly-tpl-module-js', () => {
     it('needs tests');
 });

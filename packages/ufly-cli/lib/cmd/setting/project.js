@@ -5,17 +5,14 @@ const inquirer = require('inquirer');
 
 const tmpPath = path.join(os.homedir(), '.ufly/.prorc');
 
-function setting() {
+function setting(tpls) {
   let cache = {};
   if(fs.pathExistsSync(tmpPath)){
     cache = fs.readJsonSync(tmpPath);
   }
 
   //项目类型
-  const types = [
-    'module',
-    'app'
-  ];
+  const types = Object.keys(tpls);
 
   let options = [
     {
@@ -44,6 +41,12 @@ function setting() {
       name: 'projectType',
       message: '请选择项目类型：',
       choices: types,
+      validate(input) {
+        if (!tpls[input]) {
+          return `${input} 暂不支持，建设中...请选择其他项创建`;
+        }
+        return true;
+      }
     },
     {
       type: 'input',

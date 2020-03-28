@@ -2,9 +2,14 @@ const shell = require('shelljs');
 
 function mkdir1cd(dir) {
   shell.mkdir(dir);
+  cd(dir);
+}
+
+function cd(dir) {
   shell.cd(dir);
 }
 
 module.exports = {
-  mkdir1cd
-}
+  cd,
+  mkdir1cd,
+};

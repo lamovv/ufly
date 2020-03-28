@@ -1,15 +1,15 @@
-"use strict";
-const path = require("path");
-const async = require("async");
-const mlsm = require("metalsmith");
-const compile = require("handlebars").compile;
-const util = require("ufly-util");
+'use strict';
+const path = require('path');
+const async = require('async');
+const mlsm = require('metalsmith');
+const compile = require('handlebars').compile;
+const util = require('ufly-util');
 
 async function tplModule(data, options = {}) {
   await processTpls(
     Object.assign(
       {
-        date: util.date("Y/m/d H:i"),
+        date: util.date('Y/m/d H:i'),
       },
       data,
       options
@@ -22,7 +22,7 @@ function processTpls(data) {
     mlsm(process.cwd())
       .metadata(data)
       .clean(false)
-      .source(path.resolve(__dirname, "../tpl"))
+      .source(path.resolve(__dirname, '../tpl'))
       .destination(process.cwd())
       .use(renderTpls)
       .build((err) => {
@@ -44,13 +44,13 @@ function renderTpls(files, metalsmith, done) {
     (filename, next) => {
       const str = files[filename].contents.toString();
 
-      if (!/{{([^{}]+)}}/g.test(str)) {
+      if (!/[^$]{{([^{}]+)}}/g.test(str)) {
         return next();
       }
 
       const render = compile(str, metadata);
       const result = render(metadata);
-      files[filename].contents = new Buffer(result);
+      files[filename].contents = Buffer.from(result);
       next();
     },
     done

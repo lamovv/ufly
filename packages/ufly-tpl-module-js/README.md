@@ -1,4 +1,4 @@
-# `ufly-tpl-module`
+# `ufly-tpl-module-js`
 
 > ufly-cli，配套创建 module 的 tpl
 

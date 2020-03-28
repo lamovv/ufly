@@ -1,10 +1,12 @@
 {
-  "name": "ufly-tpl-module",
+  "name": "ufly-tpl-module-wasm",
   "version": "0.1.7",
-  "description": "> ufly-cli，配套创建 module 的 tpl",
+  "description": "> ufly-cli，配套创建AssemblyScript to Wasm 的 module 的 tpl",
   "keywords": [
-    "tpl",
-    "module"
+    "AssemblyScript",
+    "Wasm",
+    "module",
+    "tpl"
   ],
   "author": "lamovv <lamovv@gmail.com>",
   "homepage": "https://github.com/lamovv/ufly",
@@ -16,11 +18,15 @@
   },
   "files": [
     "lib",
-    "tpl"
+    "tpl",
+    "sh"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lamovv/ufly.git"
+    "url": "git+https://github.com/lamovv/ufly.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/lamovv/ufly/issues"

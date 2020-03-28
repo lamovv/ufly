@@ -1,0 +1,10 @@
+{
+  "extends": "../../node_modules/assemblyscript/std/assembly.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "declaration": false
+  },
+  "include": [
+    "./*.ts"
+  ]
+}
