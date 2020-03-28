@@ -1,6 +1,6 @@
 {
   "name": "ufly-tpl-module-wasm",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "> ufly-cli，配套创建AssemblyScript to Wasm 的 module 的 tpl",
   "keywords": [
     "AssemblyScript",
@@ -36,6 +36,6 @@
     "fs-extra": "~8.1.0",
     "handlebars": "^4.5.3",
     "metalsmith": "^2.3.0",
-    "ufly-util": "^0.1.5"
+    "ufly-util": "^0.2.0"
   }
 }
