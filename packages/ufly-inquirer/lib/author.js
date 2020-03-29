@@ -5,13 +5,19 @@ const os = require('os');
 const path = require('path');
 const fs = require('fs-extra');
 const inquirer = require('inquirer');
+const ugit = require('ufly-git');
+const { getUser } = ugit;
 
 const tmpPath = path.join(os.homedir(), '.ufly/.authrc');
 
 function setting() {
-  let cache = {};
-  if(fs.pathExistsSync(tmpPath)){
-    cache = fs.readJsonSync(tmpPath);
+  let cache = getUser();
+  if (!cache.author || !cache.email) {
+    if (fs.pathExistsSync(tmpPath)) {
+      const _cache = fs.readJsonSync(tmpPath);
+      cache.author = cache.author || _cache.author;
+      cache.email = cache.email || _cache.email;
+    }
   }
 
   let options = [
@@ -19,17 +25,17 @@ function setting() {
       type: 'input',
       name: 'author',
       message: 'author',
-      default: cache.author || ''
+      default: cache.author || '',
     },
     {
       type: 'input',
       name: 'email',
       message: 'email',
-      default: cache.email || ''
-    }
+      default: cache.email || '',
+    },
   ];
 
-  return inquirer.prompt(options).then(answers => {
+  return inquirer.prompt(options).then((answers) => {
     fs.outputJson(tmpPath, answers);
     return answers;
   });

@@ -1,10 +1,10 @@
 {
-  "name": "ufly-git",
+  "name": "ufly-inquirer",
   "version": "0.2.3",
-  "description": "> ufly-cli，配套 git 工具包",
+  "description": "> ufly-cli，配套 inquirer 工具包",
   "keywords": [
-    "git",
-    "opr"
+    "ufly",
+    "inquirer"
   ],
   "author": "lamovv <lamovv@gmail.com>",
   "homepage": "https://github.com/lamovv/ufly",
@@ -28,6 +28,8 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "shelljs": "^0.8.3"
+    "fs-extra": "^9.0.0",
+    "inquirer": "^7.1.0",
+    "ufly-git": "^0.2.3"
   }
 }

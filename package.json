@@ -14,10 +14,11 @@
     "prettier": "^2.0.1"
   },
   "scripts": {
+    "changelog":"conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "clean": "rm -rf node_modules yarn.lock && lerna clean -y",
     "init": "npm run clean && yarn --ignore-scripts && lerna bootstrap --force-local",
     "pub": "lerna publish",
-    "pub:v": "lerna version --force-publish && lerna publish",
+    "pub:v": "lerna publish --force-publish",
     "rebuild": "yarn install --force"
   }
 }

@@ -5,9 +5,7 @@ const chalk = require('chalk');
 
 const sh = require("ufly-shell");
 const tpls = require('ufly-tpm');
-
-const project = require('./setting/project');
-const author = require('./setting/author');
+const inquirers = require('ufly-inquirer');
 
 module.exports = {
   command: ['init', 'yo'],
@@ -27,9 +25,15 @@ module.exports = {
   //处理子命令接受到的参数
   handler: async argv => {
     const prompts = [];
-    const answersPro = await project(tpls);
-    const answersAuthor = await author();
-    const answers = Object.assign({}, answersPro, answersAuthor);
+    const answers = {};
+
+    for(let i=0,l=inquirers.length; i<l; i++){
+      const inquirer = inquirers[i];
+      if(inquirer){
+        const answer = await inquirer(tpls);
+        Object.assign(answers, answer);
+      }
+    }
 
     const {
       isCurrent,

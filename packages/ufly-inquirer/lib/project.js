@@ -2,13 +2,19 @@ const os = require('os');
 const path = require('path');
 const fs = require('fs-extra');
 const inquirer = require('inquirer');
+const ugit = require('ufly-git');
+const { getRepo } = ugit;
 
 const tmpPath = path.join(os.homedir(), '.ufly/.prorc');
 
 function setting(tpls) {
   let cache = {};
-  if(fs.pathExistsSync(tmpPath)){
+  if (fs.pathExistsSync(tmpPath)) {
     cache = fs.readJsonSync(tmpPath);
+  }
+  const repository = getRepo();
+  if (repository) {
+    cache.repository = repository;
   }
 
   //项目类型
@@ -18,7 +24,7 @@ function setting(tpls) {
     {
       type: 'confirm',
       name: 'isCurrent',
-      message: '在当前目录创建：'
+      message: '在当前目录创建：',
     },
     {
       type: 'input',
@@ -32,9 +38,9 @@ function setting(tpls) {
         return true;
       },
       // 当 isCurrent 为 false 时增加目录创建
-      when: function(answers) {
+      when: function (answers) {
         return !answers.isCurrent;
-      }
+      },
     },
     {
       type: 'rawlist',
@@ -46,7 +52,7 @@ function setting(tpls) {
           return `${input} 暂不支持，建设中...请选择其他项创建`;
         }
         return true;
-      }
+      },
     },
     {
       type: 'input',
@@ -58,7 +64,7 @@ function setting(tpls) {
           return '请指定项目名';
         }
         return true;
-      }
+      },
     },
     {
       type: 'input',
@@ -77,11 +83,7 @@ function setting(tpls) {
       name: 'version',
       default: cache.version || '',
       message: '起始版本号',
-      choices: [
-        '1.0.0',
-        '0.1.0',
-        '0.0.1'
-      ]
+      choices: ['1.0.0', '0.1.0', '0.0.1'],
     },
     {
       type: 'input',
@@ -91,10 +93,10 @@ function setting(tpls) {
     },
   ];
 
-  return inquirer.prompt(options).then(answers => {
+  return inquirer.prompt(options).then((answers) => {
     fs.outputJson(tmpPath, answers);
     return answers;
-  });;
+  });
 }
 
 module.exports = setting;
