@@ -56,5 +56,6 @@ module.exports = {
     "no-spaced-func":2, // 禁止 function 标识符和括号之间出现空格
     "indent": [2, 2], // 规范缩进
     "quotes": [2, "single", "avoid-escape"],  // 强制使用一致的反勾号、双引号或单引号
+    // "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],  // 规范一元运算符，只在循环中使用
   }
 };
