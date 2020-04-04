@@ -1,6 +1,6 @@
 {
   "name": "ufly-inquirer",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "> ufly-cli，配套 inquirer 工具包",
   "keywords": [
     "ufly",
