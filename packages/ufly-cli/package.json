@@ -1,6 +1,6 @@
 {
   "name": "ufly-cli",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "> Cli，Use the ufly command line tool to quickly create modules and app for dev.",
   "bin": {
     "ufly": "bin/cli"
