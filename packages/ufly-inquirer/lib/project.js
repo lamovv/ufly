@@ -30,7 +30,7 @@ function setting(tpls) {
       type: 'input',
       name: 'dirName',
       default: cache.dirName || '',
-      message: '请输入要创建的目录名，用于初始化项目：',
+      message: '请输入目录名，用于创建项目：',
       validate(input) {
         if (!input) {
           return '请指定要创建的目录名';

@@ -1,5 +1,5 @@
-echo "test"
-
+#!/bin/sh
+# rebuild sh TODO
 if [ -f ~/.ufly/.tplrc ]; then
-  echo "foo"
+  echo "yy"
 fi

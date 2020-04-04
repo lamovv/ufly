@@ -1,5 +1,15 @@
 const shell = require('shelljs');
 
-exports.npm = (script) => {
-  shell.exec(`npm run ${script}`);
-};
+exports.npm = async (script) =>
+  new Promise((resolve) => {
+    shell.exec(
+      `npm run ${script}`,
+      {
+        async: true,
+        silent: true,
+      },
+      (code, stdout, stderr) => {
+        resolve();
+      }
+    );
+  });

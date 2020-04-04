@@ -74,7 +74,7 @@ module.exports = {
     "no-irregular-whitespace": 2,  // 禁止在字符串和注释之外不规则的空白
     "no-obj-calls": 2, // 禁止把全局对象 (Math 和 JSON) 作为函数调用
     "valid-typeof": 2,  // 强制 typeof 表达式与有效的字符串进行比较，typeof foo === "undefimed" 报错
-    "block-scoped-var": 2, // 强制把变量的使用限制在其定义的作用域范围内
+    // "block-scoped-var": 2, // 强制把变量的使用限制在其定义的作用域范围内
     "curly": [2, "all"], // 强制所有控制语句使用一致的括号风格
     "no-caller": 2,  // 禁用 arguments.caller 或 arguments.callee，"use strict"本身不允许
     "no-useless-call": 2,  // 禁止不必要的 .call() 和 .apply()

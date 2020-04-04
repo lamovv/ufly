@@ -5,12 +5,12 @@
   "keywords": [
     "{{keywords}}"
   ],
-  "main": "dist/index.js",
-  "module": "dist/es/index.js",
+  "browser": "dist/index.es.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "README.md",
-    "package.json"
+    "dist"
   ],
   "author": "{{author}}<{{email}}>",
   "license": "MIT",
@@ -30,6 +30,7 @@
     "@rollup/plugin-alias": "^3.0.1",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-replace": "^2.3.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "console-log-h5": "^1.0.6",
@@ -45,8 +46,8 @@
     "prettier": "^2.0.2",
     "rollup": "^2.1.0",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-replace": "^2.2.0",
-    "webpack": "^4.42.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
@@ -66,16 +67,19 @@
   },
   "scripts": {
     "2git": "npm repo",
-    "init": "npm run clean && yarn -s && yarn install --force",
+    "init": "npm run clean && rm -rf node_modules && yarn -s && yarn install --force",
     "init:nolock": "npm run clean && yarn -s --no-lockfile && yarn install --force",
-    "build": "npm-run-all -p \"build:**\"",
-    "build:esm": "rollup -c --silent",
-    "build:umd": "cross-env NODE_ENV=production webpack --mode=production",
-    "clean": "rm -rf node_modules dist",
+    "build": "run-p build:es build:types",
+    "build:es": "rm -rf dist && rollup -c --silent",
+    "build:umd": "cross-env NODE_FORMAT=umd rollup -c --silent",
+    "build:all": "run-p build build:umd",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist && prettier \"dist/*.d.ts\" --write",
+    "build:wpk": "cross-env NODE_ENV=production webpack --mode=production",
+    "clean": "rm -rf dist",
     "dev": "webpack-dev-server --watch --mode=development",
     "dev:open": "webpack-dev-server --watch --mode=development --open",
     "postversion": "git push --follow-tags",
-    "prettier": "prettier --tab-width 2 --write",
+    "prettier": "prettier --write ./src",
     "push": "sh ./publish.sh -pm",
     "pub": "npm run build:esm && sh ./publish.sh -npm"
   }

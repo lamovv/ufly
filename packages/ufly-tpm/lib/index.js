@@ -7,6 +7,7 @@ let tplrc = {
   'module-js': 'ufly-tpl-module-js',
   'module-wasm': 'ufly-tpl-module-wasm',
   app: null,
+  'project-lerna': null,
 };
 // if (fs.pathExistsSync(tplPath)) {
 //   tplrc = fs.readJsonSync(tplPath);

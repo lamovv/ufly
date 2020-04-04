@@ -9,7 +9,7 @@ document.addEventListener('click', e => {
 
   switch (action) {
     case '{{name}}':
-      fn('successed');
+      fn('string', 2, 3, 'successed');
       break;
     default:
       break;

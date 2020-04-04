@@ -27,6 +27,7 @@ module.exports = {
     const prompts = [];
     const answers = {};
 
+    const initInquirer = inquirers.splice(-1)[0];
     for(let i=0,l=inquirers.length; i<l; i++){
       const inquirer = inquirers[i];
       if(inquirer){
@@ -55,7 +56,7 @@ module.exports = {
     let err;
     const tplModule = tpls[pType];
     if(tplModule){
-      let err = await tplModule(answers);
+      err = await tplModule(answers);
       if(err){
         return spinner.fail(`${pType} 创建异常： ${err.code}-${err.message}\n`);
       }
@@ -68,14 +69,17 @@ module.exports = {
     }
 
     if(!err){
-      spinner.succeed(`${chalk.green(`${pType} 已创建完成`)}`);
-      spinner.start(`${chalk.magenta('正在初始化...\n')}`);
-      try{
-        sh.exec.npm('init -s');
-      }catch(e){
-        spinner.fail(`${chalk.magenta(`自动初始化失败，请手动执行 ${chalk.yellow.bold('npm run init')} 完成初始化`)}`);
+      spinner.succeed(`${chalk.green(`${answers.name} ${pType} 已创建完成`)}`);
+      const initAnswer = await initInquirer();
+      if(initAnswer.isInit){
+        spinner.start(`${chalk.magenta('正在安装依赖等初始化操作...\n')}`);
+        try{
+          await sh.exec.npm('init -s');
+        }catch(e){
+          spinner.fail(`${chalk.magenta(`安装依赖等初始化操作，请手动执行 ${chalk.yellow.bold('npm run init')} 完成`)}`);
+        }
+        spinner.succeed(`${chalk.green(`${pType} 已初始化完成，请执行 ${chalk.yellow.bold(' npm run dev:open ')} 进入开发`)}\n`);
       }
-      spinner.succeed(`${chalk.green(`${pType} 已初始化完成，请执行 ${chalk.yellow.bold(' npm run dev:open ')} 进入开发`)}\n`);
     }
   }
 };

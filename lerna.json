@@ -15,8 +15,7 @@
       "registry": "http://registry.npmjs.org",
       "verifyRegistry": false,
       "verifyAccess": false,
-      "allowBranch": "master",
-      "conventionalCommits": true
+      "allowBranch": "master"
     }
   },
   "lerna": "2.11.0"

@@ -2,7 +2,7 @@
 
 import babel from 'rollup-plugin-babel';
 import alias from '@rollup/plugin-alias';
-import replace from 'rollup-plugin-replace';
+import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { merge } from 'lodash';
@@ -11,8 +11,9 @@ const pkg = require('./package.json');
 
 function genCfg(options){
   return merge({
+    input: 'src/index.js',
     output: {
-      file: 'dist/es/index.js',
+      file: 'dist/index.es.js',
       format: 'es',
       sourcemap: false
     },
@@ -47,8 +48,20 @@ function genCfg(options){
   }, options);
 }
 
-export default [
+const useUmd = process.env.NODE_FORMAT == 'umd';
+export default useUmd ? 
   genCfg({
-    input: 'src/index.js'
-  })
-]
+    output: {
+      file: 'dist/index.umd.js',
+      format: 'umd',
+      name: `${pkg.name}`
+    }
+  }): [
+    genCfg(),
+    genCfg({
+      output: {
+        file: 'dist/index.cjs.js',
+        format: 'cjs',
+      }
+    })
+  ]
