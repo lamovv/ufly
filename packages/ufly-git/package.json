@@ -1,6 +1,6 @@
 {
   "name": "ufly-git",
-  "version": "0.2.5",
+  "version": "0.2.8",
   "description": "> ufly-cli，配套 git 工具包",
   "keywords": [
     "git",
