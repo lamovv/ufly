@@ -27,7 +27,6 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "shelljs": "^0.8.3",
-    "ufly-git": "^0.2.5"
+    "shelljs": "^0.8.3"
   }
 }

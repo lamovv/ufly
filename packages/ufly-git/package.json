@@ -28,6 +28,7 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
+    "configstore": "^5.0.1",
     "shelljs": "^0.8.3"
   }
 }

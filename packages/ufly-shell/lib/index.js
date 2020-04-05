@@ -1,12 +1,10 @@
 'use strict';
-// const git = require('ufly-git');
+const shell = require('shelljs');
 const dir = require('./dir');
 const exec = require('./exec');
-
-// const name = git.getUser('email');
-// console.log(name);
 
 module.exports = {
   dir,
   exec,
+  shell
 };

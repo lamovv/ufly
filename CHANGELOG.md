@@ -1,3 +1,12 @@
+# [](https://github.com/lamovv/ufly/compare/v0.2.7...v) (2020-04-05)
+
+
+
+<a name=""></a>
+# [](https://github.com/lamovv/ufly/compare/v0.2.7...v) (2020-04-05)
+
+
+
 <a name=""></a>
 # [](https://github.com/lamovv/ufly/compare/v0.2.5...v) (2020-04-04)
 

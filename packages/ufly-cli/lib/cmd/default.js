@@ -1,11 +1,18 @@
 const chalk = require('chalk');
+const figlet = require('figlet');
 const log = console.log;
 
 module.exports = {
   command: '*',
-  describe: 'default command',
+  desc: 'main command',
   //处理子命令接受到的参数
-  handler(){
-    log(chalk.red('Fly'));
+  handler(argv){
+    log(
+      chalk.hex('#1890ff').bold.italic(
+        figlet.textSync('   uFly', {
+          horizontalLayout: 'full'
+        })
+      )
+    );
   }
 }

@@ -8,22 +8,24 @@ const tpls = require('ufly-tpm');
 const inquirers = require('ufly-inquirer');
 
 module.exports = {
-  command: ['init', 'yo'],
-  describe: '初始化项目',
-  // 子命令的配置
-  builder: yargs => {
+  command: 'init [-t] [type]',
+  aliases: ['yo'],
+  desc: '创建项目：ufly init -t module-js',
+  // 子命令init 的参数配置
+  builder(yargs){
     yargs.option('t', {
       alias: 'type',
-      demand: false,
-      default: 'mpi',
+      demand: true,
+      default: null,
       describe: '项目类型',
       type: 'string'
     })
-    .example('fly init -t module')
+    .usage('Usage: init [options]')
+    .example('init -t module-js', '直接创建js module')
   },
   
   //处理子命令接受到的参数
-  handler: async argv => {
+  async handler(argv){
     const prompts = [];
     const answers = {};
 
@@ -31,7 +33,7 @@ module.exports = {
     for(let i=0,l=inquirers.length; i<l; i++){
       const inquirer = inquirers[i];
       if(inquirer){
-        const answer = await inquirer(tpls);
+        const answer = await inquirer(tpls, argv.type);
         Object.assign(answers, answer);
       }
     }
@@ -45,7 +47,7 @@ module.exports = {
     const spinner = ora({color: 'green'}).start(`${chalk.magenta(`${pType} 创建中...`)}`);
     // 是否在当前目录创建项目，若否，需新建目录并进入新建目录
     if (!isCurrent) {
-      const err = sh.dir.mkdir1cd(dirName);
+      const err = sh.dir.mkdirAndcd(dirName);
       if (err) {
         return spinner.fail(
           `${pType} 创建异常： ${err.code}-${err.message}\n`
@@ -74,7 +76,7 @@ module.exports = {
       if(initAnswer.isInit){
         spinner.start(`${chalk.magenta('正在安装依赖等初始化操作...\n')}`);
         try{
-          await sh.exec.npm('init -s');
+          await sh.exec.npmrun('init -s');
         }catch(e){
           spinner.fail(`${chalk.magenta(`安装依赖等初始化操作，请手动执行 ${chalk.yellow.bold('npm run init')} 完成`)}`);
         }

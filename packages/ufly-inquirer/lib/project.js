@@ -7,7 +7,7 @@ const { getRepo } = ugit;
 
 const tmpPath = path.join(os.homedir(), '.ufly/.prorc');
 
-function setting(tpls) {
+function setting(tpls, type) {
   let cache = {};
   if (fs.pathExistsSync(tmpPath)) {
     cache = fs.readJsonSync(tmpPath);
@@ -19,12 +19,13 @@ function setting(tpls) {
 
   //项目类型
   const types = Object.keys(tpls);
+  const isdef = !!~types.indexOf(type);
 
   let options = [
     {
       type: 'confirm',
       name: 'isCurrent',
-      message: '在当前目录创建：',
+      message: '在当前目录创建：'
     },
     {
       type: 'input',
@@ -38,9 +39,9 @@ function setting(tpls) {
         return true;
       },
       // 当 isCurrent 为 false 时增加目录创建
-      when: function (answers) {
+      when(answers) {
         return !answers.isCurrent;
-      },
+      }
     },
     {
       type: 'rawlist',
@@ -53,6 +54,9 @@ function setting(tpls) {
         }
         return true;
       },
+      when(answers) {
+        return !isdef;
+      }
     },
     {
       type: 'input',
@@ -64,37 +68,45 @@ function setting(tpls) {
           return '请指定项目名';
         }
         return true;
-      },
+      }
     },
     {
       type: 'input',
       name: 'description',
       default: cache.description || '> description',
-      message: '简要描述：',
+      message: '简要描述：'
     },
     {
       type: 'input',
       name: 'keywords',
       default: cache.keywords || '',
-      message: '关键字',
+      message: '关键字'
     },
     {
       type: 'list',
       name: 'version',
       default: cache.version || '',
       message: '起始版本号',
-      choices: ['1.0.0', '0.1.0', '0.0.1'],
+      choices: ['1.0.0', '0.1.0', '0.0.1']
     },
     {
       type: 'input',
       name: 'repository',
       default: cache.repository || '',
-      message: '仓库地址〔git〕',
-    },
+      message: '仓库地址〔git〕'
+    }
   ];
 
-  return inquirer.prompt(options).then((answers) => {
+  return inquirer.prompt(options).then(answers => {
     fs.outputJson(tmpPath, answers);
+    if (isdef) {
+      return Object.assign(
+        {
+          projectType: type
+        },
+        answers
+      );
+    }
     return answers;
   });
 }
