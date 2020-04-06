@@ -29,7 +29,8 @@
     "url": "git+ssh://git@github.com/lamovv/ufly.git"
   },
   "scripts": {
-    "debug": "node --inspect-brk ./lib/cmd/init.js"
+    "debug": "node --inspect-brk ./lib/cmd/init.js",
+    "link": "npm link --no-package-lock"
   },
   "bugs": {
     "url": "https://github.com/lamovv/ufly/issues"
