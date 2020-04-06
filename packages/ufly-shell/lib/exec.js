@@ -1,7 +1,7 @@
 const shell = require('shelljs');
 
 exports.npmrun = async script =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     shell.exec(
       `npm run ${script}`,
       {
@@ -9,13 +9,17 @@ exports.npmrun = async script =>
         silent: true
       },
       (code, stdout, stderr) => {
-        resolve();
+        if (code > 0) {
+          reject(false);
+        } else {
+          resolve(true);
+        }
       }
     );
   });
 
 exports.npmi = async module =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     shell.exec(
       'npm i --no-package-lock',
       {
@@ -23,7 +27,11 @@ exports.npmi = async module =>
         silent: true
       },
       (code, stdout, stderr) => {
-        resolve(true);
+        if (code > 0) {
+          reject(false);
+        } else {
+          resolve(true);
+        }
       }
     );
   });

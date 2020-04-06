@@ -1,7 +1,7 @@
 const shell = require('shelljs');
 
 function mkdirAndcd(dir) {
-  shell.mkdir(dir);
+  shell.mkdir('-p', dir);
   cd(dir);
 }
 

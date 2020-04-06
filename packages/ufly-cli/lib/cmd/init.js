@@ -15,8 +15,7 @@ module.exports = {
   builder(yargs){
     yargs.option('t', {
       alias: 'type',
-      demand: true,
-      default: null,
+      demand: false,
       describe: '项目类型',
       type: 'string'
     })
@@ -75,12 +74,12 @@ module.exports = {
       const initAnswer = await initInquirer();
       if(initAnswer.isInit){
         spinner.start(`${chalk.magenta('正在安装依赖等初始化操作...\n')}`);
-        try{
-          await sh.exec.npmrun('init -s');
-        }catch(e){
-          spinner.fail(`${chalk.magenta(`安装依赖等初始化操作，请手动执行 ${chalk.yellow.bold('npm run init')} 完成`)}`);
+        const done = await sh.exec.npmrun('init -s').catch(e => {
+          spinner.fail(`${chalk.red(`安装依赖等初始化操作失败，请手动执行 ${chalk.yellow.bold('npm run init')} 完成`)}`);
+        });
+        if(done){
+          spinner.succeed(`${chalk.green(`${answers.name} ${pType} 已初始化完成，请执行 ${chalk.yellow.bold(' npm run dev:open ')} 进入开发`)}\n`);
         }
-        spinner.succeed(`${chalk.green(`${pType} 已初始化完成，请执行 ${chalk.yellow.bold(' npm run dev:open ')} 进入开发`)}\n`);
       }
     }
   }

@@ -18,6 +18,9 @@
     "type": "git",
     "url": "{{repository}}"
   },
+  "engines": {
+    "node": ">=10.15.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -67,8 +70,8 @@
   },
   "scripts": {
     "2git": "npm repo",
-    "init": "npm run clean && rm -rf node_modules && yarn -s && yarn install --force",
-    "init:nolock": "npm run clean && yarn -s --no-lockfile && yarn install --force",
+    "init": "npm run clean && rm -rf node_modules && yarn install -s --force",
+    "init:nolock": "npm run clean && rm -rf node_modules && yarn install -s --force --no-lockfile",
     "build": "run-p build:es build:types",
     "build:es": "rm -rf dist && rollup -c --silent",
     "build:umd": "cross-env NODE_FORMAT=umd rollup -c --silent",

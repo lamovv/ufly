@@ -1,13 +1,12 @@
 {
   "name": "ufly-cli",
   "version": "0.2.8",
-  "description": "> Cli，Use the ufly command line tool to quickly create modules and app for dev.",
+  "description": "> Use the ufly command line tools to quickly create a dev env for modules and app.",
   "bin": {
     "ufly": "bin/cli"
   },
-  "no-optional": "true",
   "engines": {
-    "node": ">=8"
+    "node": ">=10.15.3"
   },
   "keywords": [
     "ufly"
@@ -23,9 +22,7 @@
   },
   "files": [
     "bin",
-    "lib",
-    "package.json",
-    "README.md"
+    "lib"
   ],
   "repository": {
     "type": "git",

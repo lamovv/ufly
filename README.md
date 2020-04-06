@@ -6,7 +6,7 @@
 全局安装
 
 ```bash
-$ npm i -g ufly-cli
+$ npm i -g ufly-cli yarn
 ```
 
 主命令：ufly

@@ -9,10 +9,11 @@ module.exports = {
   handler(argv){
     log(
       chalk.hex('#1890ff').bold.italic(
-        figlet.textSync('   uFly', {
+        figlet.textSync('  uFly', {
           horizontalLayout: 'full'
         })
       )
     );
+    log(chalk.hex('#bae637').bold('\nCommand line tools to quickly create a dev env for modules and app'));
   }
 }

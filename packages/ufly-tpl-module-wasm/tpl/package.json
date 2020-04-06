@@ -18,6 +18,9 @@
     "type": "git",
     "url": "{{repository}}"
   },
+  "engines": {
+    "node": ">=10.15.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
@@ -63,12 +66,12 @@
   },
   "scripts": {
     "2git": "npm repo",
-    "init": "npm run clean && yarn -s && yarn install --force -s",
-    "init:nolock": "npm run clean && yarn -s --no-lockfile && yarn install --force -s",
+    "init": "npm run clean && rm -rf node_modules && yarn install -s --force",
+    "init:nolock": "npm run clean && rm -rf node_modules && yarn install -s --force --no-lockfile",
     "build": "npm-run-all -p \"build:**\"",
     "build:esm": "#rollup -c --silent",
     "build:umd": "cross-env NODE_ENV=production webpack --mode=production",
-    "clean": "rm -rf node_modules dist",
+    "clean": "rm -rf dist",
     "dev": "webpack-dev-server --watch --mode=development",
     "dev:open": "webpack-dev-server --watch --mode=development --open",
     "postversion": "git push --follow-tags",
