@@ -17,5 +17,6 @@
       "verifyAccess": false,
       "allowBranch": "master"
     }
-  }
+  },
+  "lerna": "2.11.0"
 }
