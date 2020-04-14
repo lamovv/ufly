@@ -26,7 +26,7 @@ module.exports = {
   * error 或 2 - 开启规则，错误级别
   */
   rules: {
-    "valid-jsdoc": 0,  // 强制使用有效的 JSDoc 注释
+    "valid-jsdoc": 1,  // 强制使用有效的 JSDoc 注释
     "no-debugger": 1,  // 是否禁用 debugger
     "no-console": 0,  // 是否禁用 console
     "no-control-regex": 2,  // 禁止在正则表达式中使用控制字符
