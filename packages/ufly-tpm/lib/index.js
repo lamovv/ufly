@@ -5,9 +5,10 @@
 // // tplname : tpl-package
 let tplrc = {
   'module-js': 'ufly-tpl-module-js',
+  'module-ts': 'ufly-tpl-module-ts',
   'module-wasm': 'ufly-tpl-module-wasm',
-  app: null,
-  'project-lerna': null,
+  'project-h5(WebApp)': null,
+  'modules-lerna': null
 };
 // if (fs.pathExistsSync(tplPath)) {
 //   tplrc = fs.readJsonSync(tplPath);

@@ -2,7 +2,7 @@
  * @author {{author}}
  * @date {{date}}
  */
-
+'use strict';
 /**
  * @param {string} a - 参数A 
  * @param {number} b - 参数B 

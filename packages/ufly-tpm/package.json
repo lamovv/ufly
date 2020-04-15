@@ -26,6 +26,7 @@
   "dependencies": {
     "fs-extra": "^9.0.0",
     "ufly-tpl-module-js": "^0.3.4",
+    "ufly-tpl-module-ts": "^0.3.4",
     "ufly-tpl-module-wasm": "^0.3.4"
   }
 }

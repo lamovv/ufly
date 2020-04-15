@@ -6,10 +6,10 @@
 
 ```js
 import {
-  foo
+  empty
 } from '{{name}}';
-
-foo();
+// result true
+empty([]);
 ```
 
 ## Dev
@@ -19,6 +19,7 @@ foo();
   - 自动打开浏览器：`$ npm run dev:open`
 4. 构建：
   - 默认构建cjs与es6 module：`$ npm run build`
+    - 默认并行运行测试用例
   - 若只构建umd：`$ npm run build:umd`
     - 同时，需要手动修改`package.json` main字段指向`dist/index.umd.js`
   - 若全部构建：`$ npm run build:all`
@@ -28,3 +29,4 @@ foo();
   - **message格式参照 `commitlint.config.js` 规范提交**
 6. 提交git并发布npm包：`npm run pub -- commit-message`
   - 指定版本位(patch|minor|major)，默认为patch，自动+1：`npm run pub -- commit-message -v minor`
+7. 运行测试用例：`$ npm run test`

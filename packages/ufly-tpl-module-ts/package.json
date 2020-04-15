@@ -1,13 +1,14 @@
 {
-  "name": "ufly-tpl-module-js",
+  "name": "ufly-tpl-module-ts",
   "version": "0.3.4",
-  "description": "> ufly-cli，配套创建 module 的 tpl",
+  "description": "> ufly-cli，配套创建 Typescript 的 module 的 tpl",
   "keywords": [
-    "tpl",
-    "module"
+    "typescript",
+    "module",
+    "tpl"
   ],
   "author": "lamovv <lamovv@gmail.com>",
-  "homepage": "https://github.com/lamovv/ufly",
+  "homepage": "https://github.com/lamovv/ufly#readme",
   "license": "MIT",
   "main": "lib/index.js",
   "directories": {
@@ -21,7 +22,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lamovv/ufly.git"
+    "url": "git+https://github.com/lamovv/ufly.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/lamovv/ufly/issues"

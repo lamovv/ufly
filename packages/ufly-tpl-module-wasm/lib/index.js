@@ -45,7 +45,7 @@ function renderTpls(files, metalsmith, done) {
       const str = files[filename].contents.toString();
 
       // 订正
-      if (/^_/i.test(filename)) {
+      if (/^_[^_]+/i.test(filename)) {
         const _filename = filename.replace(/^_/i, '.');
         files[_filename] = files[filename];
         delete files[filename];

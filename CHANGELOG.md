@@ -1,4 +1,9 @@
 <a name=""></a>
+# [](https://github.com/lamovv/ufly/compare/v0.3.4...v) (2020-04-15)
+
+
+
+<a name=""></a>
 # [](https://github.com/lamovv/ufly/compare/v0.3.3...v) (2020-04-15)
 
 
