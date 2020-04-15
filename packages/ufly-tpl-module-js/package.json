@@ -1,6 +1,6 @@
 {
   "name": "ufly-tpl-module-js",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "> ufly-cli，配套创建 module 的 tpl",
   "keywords": [
     "tpl",
