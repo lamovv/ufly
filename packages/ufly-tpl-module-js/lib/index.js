@@ -9,7 +9,7 @@ async function tplModule(data, options = {}) {
   await processTpls(
     Object.assign(
       {
-        date: util.date('Y/m/d H:i'),
+        date: util.date('Y/m/d H:i')
       },
       data,
       options
@@ -25,7 +25,7 @@ function processTpls(data) {
       .source(path.resolve(__dirname, '../tpl'))
       .destination(process.cwd())
       .use(renderTpls)
-      .build((err) => {
+      .build(err => {
         if (err) {
           reject(err);
         } else {
@@ -50,6 +50,9 @@ function renderTpls(files, metalsmith, done) {
 
       const render = compile(str, metadata);
       const result = render(metadata);
+      if (/^_/i.test(filename)) {
+        filename = filename.replace(/^_/i, '.');
+      }
       files[filename].contents = Buffer.from(result);
       next();
     },

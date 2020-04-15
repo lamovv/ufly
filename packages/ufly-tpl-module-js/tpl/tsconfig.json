@@ -11,7 +11,7 @@
     "sourceMap": false,
     "declaration": true,
     "declarationDir": "./dist",
-    "rootDirs": "./src",
+    "rootDirs": ["./src"],
     "outDir": "./dist",
     "moduleResolution": "classic",
     "pretty": true,
