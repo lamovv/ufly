@@ -44,15 +44,20 @@ function renderTpls(files, metalsmith, done) {
     (filename, next) => {
       const str = files[filename].contents.toString();
 
+      // 订正
+      if (/^_/i.test(filename)) {
+        const _filename = filename.replace(/^_/i, '.');
+        files[_filename] = files[filename];
+        delete files[filename];
+        return next();
+      }
+
       if (!/[^$]{{([^{}]+)}}/g.test(str)) {
         return next();
       }
 
       const render = compile(str, metadata);
       const result = render(metadata);
-      if (/^_/i.test(filename)) {
-        filename = filename.replace(/^_/i, '.');
-      }
       files[filename].contents = Buffer.from(result);
       next();
     },

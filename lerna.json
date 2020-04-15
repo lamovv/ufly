@@ -6,12 +6,13 @@
   ],
   "command": {
     "bootstrap": {
+      "npmClient": "yarn",
       "npmClientArgs": [
-        "--no-lockfile",
-        "--no-package-lock"
+        "--no-lockfile"
       ]
     },
     "publish": {
+      "npmClient": "yarn",
       "registry": "http://registry.npmjs.org",
       "verifyRegistry": false,
       "verifyAccess": false,
