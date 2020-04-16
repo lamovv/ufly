@@ -69,7 +69,7 @@
     "init": "npm run clean && rm -rf node_modules && yarn install -s --force",
     "init:nolock": "npm run clean && rm -rf node_modules && yarn install -s --force --no-lockfile",
     "build": "npm-run-all -p \"build:**\"",
-    "build:esm": "#rollup -c --silent",
+    "build:es": "#rollup -c --silent",
     "build:umd": "cross-env NODE_ENV=production webpack --mode=production",
     "clean": "rm -rf dist",
     "dev": "webpack-dev-server --watch --mode=development",
@@ -77,6 +77,6 @@
     "postversion": "git push --follow-tags",
     "prettier": "prettier --write ./src",
     "push": "sh ./publish.sh -pm",
-    "pub": "npm run build:esm && sh ./publish.sh -npm"
+    "pub": "npm run build:es && sh ./publish.sh -npm"
   }
 }

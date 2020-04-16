@@ -90,6 +90,6 @@
     "dev:open": "webpack-dev-server --watch --mode=development --open",
     "postversion": "git push --follow-tags",
     "push": "sh ./publish.sh -pm",
-    "pub": "npm run build:esm && sh ./publish.sh -npm"
+    "pub": "npm run build:es && sh ./publish.sh -npm"
   }
 }

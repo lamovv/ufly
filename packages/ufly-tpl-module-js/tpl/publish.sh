@@ -34,5 +34,5 @@ if [ "$npm" ]
 then
   # patch|minor|major
   npm version ${version:=patch}
-  tnpm publish
+  npm publish
 fi

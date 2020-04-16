@@ -84,6 +84,6 @@
     "postversion": "git push --follow-tags",
     "prettier": "prettier --write ./src",
     "push": "sh ./publish.sh -pm",
-    "pub": "npm run build:esm && sh ./publish.sh -npm"
+    "pub": "npm run build:es && sh ./publish.sh -npm"
   }
 }
