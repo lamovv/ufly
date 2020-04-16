@@ -68,7 +68,7 @@
     "2git": "npm repo",
     "init": "npm run clean && rm -rf node_modules && yarn install -s --force",
     "init:nolock": "npm run clean && rm -rf node_modules && yarn install -s --force --no-lockfile",
-    "build": "npm-run-all -p \"build:**\"",
+    "build": "run-p prettier \"build:**\"",
     "build:es": "#rollup -c --silent",
     "build:umd": "cross-env NODE_ENV=production webpack --mode=production",
     "clean": "rm -rf dist",
@@ -77,6 +77,6 @@
     "postversion": "git push --follow-tags",
     "prettier": "prettier --write ./src",
     "push": "sh ./publish.sh -pm",
-    "pub": "npm run build:es && sh ./publish.sh -npm"
+    "pub": "npm run build && sh ./publish.sh -npm"
   }
 }

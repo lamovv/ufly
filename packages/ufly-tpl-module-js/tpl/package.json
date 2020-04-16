@@ -72,11 +72,11 @@
     "2git": "npm repo",
     "init": "npm run clean && rm -rf node_modules && yarn install -s --force",
     "init:nolock": "npm run clean && rm -rf node_modules && yarn install -s --force --no-lockfile",
-    "build": "run-p build:es build:types",
+    "build": "run-p prettier build:es build:types",
     "build:es": "rm -rf dist && rollup -c --silent",
     "build:umd": "cross-env NODE_FORMAT=umd rollup -c --silent",
     "build:all": "run-p build build:umd",
-    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist && prettier \"dist/*.d.ts\" --write",
+    "build:types": "tsc",
     "build:wpk": "cross-env NODE_ENV=production webpack --mode=production",
     "clean": "rm -rf dist",
     "dev": "webpack-dev-server --watch --mode=development",
@@ -84,6 +84,6 @@
     "postversion": "git push --follow-tags",
     "prettier": "prettier --write ./src",
     "push": "sh ./publish.sh -pm",
-    "pub": "npm run build:es && sh ./publish.sh -npm"
+    "pub": "npm run build && sh ./publish.sh -npm"
   }
 }

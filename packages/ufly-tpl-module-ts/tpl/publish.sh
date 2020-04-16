@@ -34,5 +34,5 @@ if [ "$npm" ]
 then
   # patch|minor|major
   npm version ${version:=patch}
-  npm publish
+  npm publish --registry=https://registry.npmjs.org
 fi

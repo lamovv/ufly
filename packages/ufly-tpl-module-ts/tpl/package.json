@@ -79,17 +79,17 @@
     "test": "jest",
     "init": "npm run clean && rm -rf node_modules && yarn install -s --force",
     "init:nolock": "npm run clean && rm -rf node_modules && yarn install -s --force --no-lockfile",
-    "build": "run-p test build:es && npm run prettier",
+    "build": "run-p prettier test build:es",
     "build:es": "rm -rf dist && rollup -c --silent",
     "build:umd": "cross-env NODE_FORMAT=umd rollup -c --silent",
     "build:all": "run-p build:umd build",
-    "prettier": "prettier --write ./src ./dist",
+    "prettier": "prettier --write ./src",
     "build:wpk": "cross-env NODE_ENV=production webpack --mode=production",
     "clean": "rm -rf dist",
     "dev": "webpack-dev-server --watch --mode=development",
     "dev:open": "webpack-dev-server --watch --mode=development --open",
     "postversion": "git push --follow-tags",
     "push": "sh ./publish.sh -pm",
-    "pub": "npm run build:es && sh ./publish.sh -npm"
+    "pub": "npm run build && sh ./publish.sh -npm"
   }
 }
