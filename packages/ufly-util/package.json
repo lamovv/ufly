@@ -1,6 +1,6 @@
 {
   "name": "ufly-util",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "> ufly-cli，配套 utils 工具包",
   "keywords": [
     "util"

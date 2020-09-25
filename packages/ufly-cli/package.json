@@ -1,6 +1,6 @@
 {
   "name": "ufly-cli",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "> Use the ufly command line tools to quickly create a dev env for modules and app.",
   "bin": {
     "ufly": "bin/cli"
@@ -42,9 +42,9 @@
     "npm-check-updates": "^4.1.1",
     "ora": "~4.0.3",
     "shelljs": "~0.8.3",
-    "ufly-inquirer": "^0.3.8",
-    "ufly-shell": "^0.3.8",
-    "ufly-tpm": "^0.3.8",
+    "ufly-inquirer": "^0.3.9",
+    "ufly-shell": "^0.3.9",
+    "ufly-tpm": "^0.3.9",
     "yargs": "~15.0.2"
   }
 }
