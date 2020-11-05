@@ -8,6 +8,7 @@
  * Footer
  * 
  * type：
+ *  - upd: 更新某功能（不是 feat, 不是 fix）
  *  - feat: 新功能，A new feature
  *  - fix: bug fix
  *  - docs: 文档更新

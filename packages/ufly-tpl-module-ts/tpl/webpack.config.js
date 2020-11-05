@@ -80,7 +80,7 @@ module.exports = {
     modules: ['node_modules'],
     mainFields: ['module', 'main'],
     alias: {
-      '@ali/utils-var-handler': path.resolve('./src/index')
+      '{{name}}': path.resolve('./src/index')
     }
   }
 };
