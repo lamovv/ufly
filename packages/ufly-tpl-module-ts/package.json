@@ -1,6 +1,6 @@
 {
   "name": "ufly-tpl-module-ts",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "description": "> ufly-cli，配套创建 Typescript 的 module 的 tpl",
   "keywords": [
     "typescript",
@@ -35,6 +35,6 @@
     "fs-extra": "~8.1.0",
     "handlebars": "^4.5.3",
     "metalsmith": "^2.3.0",
-    "ufly-util": "^0.3.9"
+    "ufly-util": "^0.3.10"
   }
 }
