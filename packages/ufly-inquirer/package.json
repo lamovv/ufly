@@ -1,6 +1,6 @@
 {
   "name": "ufly-inquirer",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "description": "> ufly-cli，配套 inquirer 工具包",
   "keywords": [
     "ufly",
@@ -30,6 +30,6 @@
   "dependencies": {
     "fs-extra": "^9.0.0",
     "inquirer": "^7.1.0",
-    "ufly-git": "^0.3.10"
+    "ufly-git": "^0.3.11"
   }
 }
