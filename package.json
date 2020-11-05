@@ -14,7 +14,7 @@
     "prettier": "^2.0.1"
   },
   "scripts": {
-    "link:cli": "cd packages/ufly-cli/ && npm link --no-package-lock",
+    "link:cli": "cd packages/cli/ && npm link --no-package-lock",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "clean": "rm -rf node_modules",
     "bootstrap": "npm run init",

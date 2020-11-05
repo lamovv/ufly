@@ -1,0 +1,32 @@
+{
+  "name": "@ufly/tpm",
+  "version": "0.3.11",
+  "description": "> @ufly/cli，配套 tpl package manager",
+  "author": "lamovv <lamovv@gmail.com>",
+  "homepage": "https://github.com/lamovv/ufly#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamovv/ufly.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/lamovv/ufly/issues"
+  },
+  "dependencies": {
+    "fs-extra": "^9.0.0",
+    "@ufly/tpl-module-js": "^0.3.11",
+    "@ufly/tpl-module-ts": "^0.3.11",
+    "@ufly/tpl-module-wasm": "^0.3.11"
+  }
+}

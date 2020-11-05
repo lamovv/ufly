@@ -1,0 +1,35 @@
+{
+  "name": "@ufly/inquirer",
+  "version": "0.3.11",
+  "description": "> @ufly/cli，配套 inquirer 工具包",
+  "keywords": [
+    "ufly",
+    "inquirer"
+  ],
+  "author": "lamovv <lamovv@gmail.com>",
+  "homepage": "https://github.com/lamovv/ufly",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamovv/ufly.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/lamovv/ufly/issues"
+  },
+  "dependencies": {
+    "fs-extra": "^9.0.0",
+    "inquirer": "^7.1.0",
+    "@ufly/git": "^0.3.11"
+  }
+}

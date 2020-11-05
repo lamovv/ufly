@@ -1,0 +1,34 @@
+{
+  "name": "@ufly/git",
+  "version": "0.3.11",
+  "description": "> @ufly/cli，配套 git 工具包",
+  "keywords": [
+    "git",
+    "opr"
+  ],
+  "author": "lamovv <lamovv@gmail.com>",
+  "homepage": "https://github.com/lamovv/ufly",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamovv/ufly.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/lamovv/ufly/issues"
+  },
+  "dependencies": {
+    "configstore": "^5.0.1",
+    "shelljs": "^0.8.3"
+  }
+}
