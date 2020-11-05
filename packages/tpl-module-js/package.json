@@ -1,6 +1,6 @@
 {
   "name": "@ufly/tpl-module-js",
-  "version": "0.3.11",
+  "version": "0.5.0",
   "description": "> @ufly/cli，配套创建 module 的 tpl",
   "keywords": [
     "tpl",
@@ -27,10 +27,10 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
+    "@ufly/util": "^0.5.0",
     "async": "^3.1.0",
     "fs-extra": "~8.1.0",
     "handlebars": "^4.5.3",
-    "metalsmith": "^2.3.0",
-    "@ufly/util": "^0.3.11"
+    "metalsmith": "^2.3.0"
   }
 }
