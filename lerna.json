@@ -13,12 +13,9 @@
     },
     "publish": {
       "allowBranch": "master",
-      "verifyAccess": true,
-      "verifyRegistry": true,
-      "registry": "http://registry.npmjs.org",
-      "publishConfig": {
-        "access": "public"
-      }
+      "verifyAccess": false,
+      "verifyRegistry": false,
+      "registry": "https://registry.npmjs.org"
     }
   },
   "lerna": "2.11.0"

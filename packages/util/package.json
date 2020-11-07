@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/lamovv/ufly/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

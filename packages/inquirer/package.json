@@ -31,5 +31,8 @@
     "@ufly/git": "^0.6.1",
     "fs-extra": "^9.0.0",
     "inquirer": "^7.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
