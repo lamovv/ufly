@@ -13,10 +13,11 @@
       ]
     },
     "publish": {
+      "npmClient": "npm",
       "allowBranch": "master",
       "verifyAccess": false,
       "verifyRegistry": false,
-      "registry": "https://registry.npm.taobao.org"
+      "registry": "https://registry.npmjs.org"
     }
   }
 }
