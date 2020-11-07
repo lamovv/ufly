@@ -1,3 +1,21 @@
+# [](https://github.com/lamovv/ufly/compare/v0.6.1...v) (2020-11-07)
+
+
+### Bug Fixes
+
+* **module-ts:** fix devDep ([77d4dbd](https://github.com/lamovv/ufly/commit/77d4dbdcfb8fad4c64b376e2f17450440a7a4cef))
+
+
+
+# [](https://github.com/lamovv/ufly/compare/v0.6.1...v) (2020-11-07)
+
+
+### Bug Fixes
+
+* **module-ts:** fix devDep ([77d4dbd](https://github.com/lamovv/ufly/commit/77d4dbdcfb8fad4c64b376e2f17450440a7a4cef))
+
+
+
 <a name=""></a>
 # [](https://github.com/lamovv/ufly/compare/v0.3.4...v) (2020-04-15)
 

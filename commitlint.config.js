@@ -8,6 +8,7 @@
  * Footer
  * 
  * type：
+ * - [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test]
  *  - feat: 新功能，A new feature
  *  - fix: bug fix
  *  - docs: 文档更新

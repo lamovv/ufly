@@ -44,12 +44,19 @@ function renderTpls(files, metalsmith, done) {
     (filename, next) => {
       const str = files[filename].contents.toString();
 
-      // 订正
+      // 订正 .* 文件
       if (/^_[^_]+/i.test(filename)) {
         const _filename = filename.replace(/^_/i, '.');
         files[_filename] = files[filename];
         delete files[filename];
         return next();
+      }
+      // 订正 *.tpl 文件
+      if (/\.tpl$/i.test(filename)) {
+        const _filename = filename;
+        filename = _filename.replace(/\.tpl$/i, '');
+        files[filename] = files[_filename];
+        delete files[_filename];
       }
 
       if (!/[^$]{{([^{}]+)}}/g.test(str)) {
