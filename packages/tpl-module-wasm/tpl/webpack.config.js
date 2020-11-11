@@ -74,6 +74,9 @@ module.exports = {
   devServer: {
     //允许机器外访问，使用本机IP:Port，如：192.168.1.6:9000
     host: `${ip.address()}`,
+    // 注释上面配置打开如下配置，可本机绑定host(如，30.11.106.69	dev.foo.com)，并提供代理服务(如Charles)，手机绑定代理后，可访问 dev.foo.com
+    // host: '0.0.0.0',
+    // disableHostCheck: true,
     port: 9000,
     contentBase: [
       path.join(__dirname, '/dist'),
