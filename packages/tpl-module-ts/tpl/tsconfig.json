@@ -19,7 +19,8 @@
     "moduleResolution": "node",
     "pretty": true,
     "removeComments": true,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "esModuleInterop": true
   },
   "include": [
     "./src/**/*"

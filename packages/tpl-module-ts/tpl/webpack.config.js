@@ -29,7 +29,7 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|js)/,
-        exclude: /node_modules|assembly/,
+        exclude: /node_modules/,
         enforce: 'pre',
         use: 'eslint-loader',
       },

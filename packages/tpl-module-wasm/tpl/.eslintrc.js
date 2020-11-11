@@ -93,5 +93,6 @@ module.exports = {
     // "indent": [2, 2], // 规范缩进
     "quotes": [2, "single", "avoid-escape"],  // 强制使用一致的反勾号、双引号或单引号
     "max-params":[2,6], // 强制 function 定义中最多允许的参数数量，因为当前寄存器最多只有6个用作函数参数
+    "no-empty": [2, { "allowEmptyCatch": true }], // 禁止空块语句,catch可空
   }
 };

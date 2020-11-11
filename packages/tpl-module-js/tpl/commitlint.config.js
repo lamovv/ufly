@@ -1,4 +1,5 @@
 /**
+ * https://www.conventionalcommits.org/en/v1.0.0/
  * commit message的格式，可以安装 commitizen
  * Header(是必须的)，注意 :与subject之间的空格必须有；scope主要用于说明 commit 影响的范围，比如MVC，视项目情况自主分层
  *  - <type>([scope]): <subject>

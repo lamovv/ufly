@@ -28,8 +28,8 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@rollup/plugin-alias": "^3.0.1",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^11.0.2",
@@ -38,7 +38,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "console-log-h5": "^1.0.6",
-    "conventional-changelog-cli": "^2.0.31",
+    "conventional-changelog-cli": "^2.1.1",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
@@ -69,6 +69,7 @@
     ]
   },
   "scripts": {
+    "upgrade": "yarn upgrade-interactive --latest",
     "2git": "npm repo",
     "init": "npm run clean && rm -rf node_modules && yarn install -s --force",
     "init:nolock": "npm run clean && rm -rf node_modules && yarn install -s --force --no-lockfile",
