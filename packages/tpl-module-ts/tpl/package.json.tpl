@@ -78,7 +78,7 @@
   "scripts": {
     "upgrade": "yarn upgrade-interactive --latest",
     "2git": "npm repo",
-    "test": "jest",
+    "test": "jest ",
     "init": "npm run clean && rm -rf node_modules && yarn install -s --force",
     "init:nolock": "npm run clean && rm -rf node_modules && yarn install -s --force --no-lockfile",
     "build": "run-p prettier test build:es",

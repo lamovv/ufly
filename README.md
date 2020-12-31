@@ -17,6 +17,15 @@ $ npm i -g @ufly/cli yarn
 //查看使用帮助
 $ ufly -h
 
-//创建 module 或 app
-$ ufly init
-```
+## 创建 module 或 app
+1. 在 git 创建新 repository：[Create a new repository](https://github.com/new)
+2. Clone 到本地
+3. 初始化项目：
+
+  ```sh
+  $ cd repo // 进入项目目录
+  $ ufly init // 使用cli初始化项目
+  ```
+4. 配置coveralls token
+  - [ADD REPO](https://coveralls.io/repos/new)，将关联的仓库on，details里查看token
+  - 将 repo_token 复制进 `.coveralls.yml`：`repo_token: ua...`

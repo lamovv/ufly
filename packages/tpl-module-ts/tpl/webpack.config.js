@@ -81,6 +81,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts'],
     modules: ['node_modules'],
+    // 若开发调试本地模块，可在配置为['src', 'module', 'main']，并在本地模块的package.json增加"src":"src/index.ts"配置
     mainFields: ['module', 'main'],
     alias: {
       '{{name}}': path.resolve('./src/index')
