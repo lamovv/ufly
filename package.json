@@ -17,6 +17,7 @@
     "prettier": "^2.1.2"
   },
   "scripts": {
+    "debug": "node --inspect-brk packages/cli/bin/cli",
     "upgrade": "yarn upgrade-interactive --latest",
     "link": "cd packages/cli/ && npm link --no-package-lock",
     "unlink": "cd packages/cli/ && npm unlink --no-package-lock",

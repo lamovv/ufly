@@ -84,7 +84,7 @@ module.exports = {
     "no-invalid-this": 1,  // 禁止 this 关键字出现在类和类对象之外
     "no-undef":2, // 禁用未声明的变量，除非在 global 配置中声明
     "no-use-before-define":0, // 不允许在变量定义之前使用它们
-    "no-unused-vars": [2, {"vars":"all", "args":"none"}],  // 禁止出现未使用过的变量
+    "no-unused-vars": [1, {"vars":"all", "args":"none"}],  // 禁止出现未使用过的变量
     "array-bracket-spacing": [2,"never"], // 指定数组的元素之间要以空格隔开(, 后面)， never参数：[ 之前和 ] 之后不能带空格，always参数：[ 之前和 ] 之后必须带空格
     "brace-style": [2, "1tbs", {"allowSingleLine":true}],  // if while function 后面的{必须与if在同一行，java风格。
     "key-spacing": [2, {"beforeColon":false, "afterColon":true}],  // 强制在对象字面量的属性中键和值之间使用一致的间距
