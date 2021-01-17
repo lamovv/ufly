@@ -6,6 +6,10 @@ const pkg = require('./package.json');
 
 const isProd = process.env.NODE_ENV != 'development';
 
+// Web Server 协议、端口号配置，默认 http:、80
+const prototol = 'http:';
+const port = 80;
+
 module.exports = {
   context: __dirname,
   devtool: isProd ? 'cheap-module-source-map':'source-map', //cheap-module-eval-source-map
@@ -71,11 +75,10 @@ module.exports = {
   devServer: {
     hot: true,
     watchContentBase: true,
-    // 同网段内，手机可直接访问无需代理
-    // host: `${ip.address()}`,
     // 允许手机绑定本地代理服务后访问，与 disableHostCheck: true 组合使用
     host: '0.0.0.0',
-    port: 80,
+    port,
+    openPage: `${prototol}//${ip.address()}${port == 80 ? '': `:${port}`}`,  // 同网段内，手机可直接访问无需代理
     disableHostCheck: true,
     // 与 host: '0.0.0.0' 配合使用，在 disableHostCheck: true 未开启时，配置可访问服务的域名白名单
     // allowedHosts: [

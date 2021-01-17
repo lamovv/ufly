@@ -48,11 +48,13 @@ module.exports = {
               presets: ['@babel/preset-env'],
               plugins: [
                 ['@babel/plugin-transform-runtime', {
-                  useESModules: true,
+                  // 开启后，关闭commonjs方式，以esm方式引入helpers函数
+                  useESModules: true,  //默认false
                 }],
                 '@babel/plugin-syntax-dynamic-import',
                 '@babel/plugin-transform-modules-commonjs',
-                '@babel/plugin-proposal-object-rest-spread'
+                '@babel/plugin-proposal-object-rest-spread',
+                '@babel/plugin-proposal-class-properties'
               ],
             },
           },
