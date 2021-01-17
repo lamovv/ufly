@@ -4,7 +4,7 @@
  */
 'use strict';
 
-export function empty(_var: unknown): boolean {
+export function empty<T>(_var: T): boolean {
   // undefinded、null、0、false、''
   if (!_var) {
     return true;

@@ -3,3 +3,5 @@ dist
 **/.*
 !.gitignore
 !*.js
+coverage
+.coveralls.yml

@@ -1,0 +1,3 @@
+# support for coveralls, travis testing and add badges to README.md.
+# Need an API token for scripts or testing. [Generate a personal access token](https://github.com/settings/tokens/new) for quick access to the GitHub API
+repo_token: WG1hYHr6lxrhTJWuYrYdqvaJkSlrH6RI2

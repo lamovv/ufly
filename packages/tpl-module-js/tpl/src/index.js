@@ -3,22 +3,19 @@
  * @date {{date}}
  */
 'use strict';
+
 /**
- * @param {string} a - 参数A 
- * @param {number} b - 参数B 
- * @param {any} args - 其他参数
- * @returns {string|boolean}
+ * Used for proxying regular HTTP(S) requests
+ * @param {number} a - 参数A
+ * @param {number} b - 参数B
+ * @returns {number|boolean} ret
  */
-function fn(a, b, ...args) {
-  console.log('%c Method fn was invoked and executed successfully, args ->', 'color:#0f0', args);
-  
-  if(b > 1 ){
-    return true;
+function compare(a, b) {
+  if (a === b) {
+    return 0;
   } else {
-    return a;
+    return a > b;
   }
 }
 
-export {
-  fn
-}
+export { compare };

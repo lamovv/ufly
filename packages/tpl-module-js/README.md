@@ -1,6 +1,6 @@
 # `@ufly/tpl-module-js`
 
-> @ufly/cli，配套创建 module 的 tpl
+> @ufly/cli，配套创建 JS 的 module 的 tpl
 
 ## Usage
 1. 安装cli：`$ npm i -g @ufly/cli`

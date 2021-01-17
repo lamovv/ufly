@@ -1,24 +1,20 @@
-const ip = require('ip');
 const path = require('path');
-const webpack = require('webpack');
 const pkg = require('./package.json');
 
 const isProd = process.env.NODE_ENV != 'development';
 
 module.exports = {
   context: __dirname,
-  devtool: isProd ? 'cheap-module-source-map':'source-map', //cheap-module-eval-source-map
+  devtool: 'source-map',//'cheap-module-source-map' | cheap-module-eval-source-map
   entry: {
-    'demo/index': './demo/index.js'
+    'index': './src/index.js'
   },
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: '/dist/',
     filename: '[name].js',
-    libraryTarget: 'umd',
-    library: pkg.name,
-    libraryExport: 'default',
-    umdNamedDefine: true,
+    libraryTarget: 'commonjs-module', // ES2015 module wrapped in CommonJS
+    library: pkg.name
   },
   stats: {
     modules: false,
@@ -64,32 +60,8 @@ module.exports = {
       }
     ],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ],
-  watchOptions: {
-    ignored: /node_modules/,
-    // poll: 1000
-  },
-  devServer: {
-    //允许机器外访问，使用本机IP:Port，如：192.168.1.6:9000
-    host: `${ip.address()}`,
-    // 注释上面配置打开如下配置，可本机绑定host(如，30.11.106.69	dev.foo.com)，并提供代理服务(如Charles)，手机绑定代理后，可访问 dev.foo.com
-    // host: '0.0.0.0',
-    // disableHostCheck: true,
-    port: 9000,
-    contentBase: [
-      path.join(__dirname, '/dist'),
-      path.join(__dirname, '/demo'),
-    ],
-    hot: true,
-  },
   resolve: {
     extensions: ['.ts', '.js'],
-    // 若开发调试本地模块，可在配置为['src', 'module', 'main']，并在本地模块的package.json增加"src":"src/index.ts"配置
-    mainFields: ['module', 'main'],
-    alias: {
-      '{{name}}': path.resolve(__dirname, './src/index.js')
-    }
+    mainFields: ['module', 'main']
   }
 };

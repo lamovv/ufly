@@ -1,14 +1,13 @@
 'use strict';
 import instantiate from './assembly/index.ts';
 
+// 共享内存
 const fooImports = {
   env: {
-    gValue: 666,
-    log: console.log,
-    abort: function abort(message, source, lineno, colno) {
-      throw Error(`abort: ${message} at ${source}:${lineno}:${colno}`);
-    },
-  },
+    vdata: 666,
+    logi: console.log,
+    logs: console.log
+  }
 };
 
 // Promise<fooModule>
@@ -17,19 +16,18 @@ const fooP = instantiate(fooImports);
 /**
  * @param {string} a
  * @param {string} b
- * @param {number} digit
+ * @param {number=} digit
  * @returns {Promise<number>}
  */
-export async function compareVersion(a, b, digit) {
-  return fooP.then((fooMod) => {
-    let { compareVersion, __allocString, __retain, __release } = fooMod;
+export async function compareVersion(a, b, digit=3) {
+  return fooP.then(({ exports }) => {
+    // 使用 exports 上挂载的实用方法获取 JS ”对象“数据内存地址，供 Wasm 使用: https://www.assemblyscript.org/loader.html#module-instance-utility
+    let { compareVersion, __newString } = exports;
+    // JS 只需将参数直接透传给 Wasm 即可
+    const va = __newString(a);
+    const vb = __newString(b);
 
-    const va = __retain(__allocString(a));
-    const vb = __retain(__allocString(b));
-    const r = compareVersion(va, vb);
-    __release(va);
-    __release(vb);
-    return r;
+    return compareVersion(va, vb, digit);
   });
 }
 

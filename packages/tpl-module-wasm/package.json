@@ -34,7 +34,7 @@
   "dependencies": {
     "@ufly/util": "^0.6.5",
     "async": "^3.1.0",
-    "fs-extra": "~8.1.0",
+    "fs-extra": "~9.0.1",
     "handlebars": "^4.5.3",
     "metalsmith": "^2.3.0"
   },

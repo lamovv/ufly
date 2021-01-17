@@ -1,19 +1,26 @@
 'use strict';
 import 'console-log-h5';
 
-import {
-  fn
-} from '{{name}}';
+import { compare } from 'compare';
 
 document.addEventListener('click', e => {
-  const action = e.target.getAttribute('data-action');
+    const action = e.target.getAttribute('data-action');
 
-  switch (action) {
-    case '{{name}}':
-      fn('string', 2, 3, 'successed');
-      break;
-    default:
-      break;
-  }
-
-}, false);
+    let ret;
+    switch (action) {
+      case 'compare':
+        ret = compare(2, 3);
+        console.log(ret);
+        break;
+      case 'mock':
+        fetch('/api/getData.json')
+          .then(response => response.json())
+          .then(json => console.log(json))
+          .catch(e => console.error('Error:', e));
+        break;
+      default:
+        break;
+    }
+  },
+  false
+);

@@ -11,7 +11,7 @@ module.exports = {
   devtool: isProd ? 'cheap-module-source-map':'source-map', //cheap-module-eval-source-map
   // devtool: false,
   entry: {
-    'demo/index': './demo/index.ts'
+    'demo/index': './demo/index.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -28,26 +28,33 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|js)/,
-        exclude: /node_modules/,
+        test: /\.ts/,
+        exclude: /node_modules|assembly/,
         enforce: 'pre',
         use: 'eslint-loader',
       },
       {
-        test: /\.(js|ts)$/,
+        test: /\.ts$/,
+        loader: 'assemblyscript-wasm-loader',
+        include: /assembly/,
+        options: {
+          limit: 102400,
+          // limit: 1024,
+          // optimize: '3z',
+          // measure: true
+        }
+      },
+      {
+        test: /\.js$/,
         exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                '@babel/preset-env',
-                '@babel/preset-typescript'
-              ],
+              presets: ['@babel/preset-env'],
               plugins: [
                 ['@babel/plugin-transform-runtime', {
-                  // 开启后，关闭commonjs方式，以esm方式引入helpers函数
-                  // useESModules: true,  //默认false
+                  useESModules: true,
                 }],
                 '@babel/plugin-syntax-dynamic-import',
                 '@babel/plugin-transform-modules-commonjs',

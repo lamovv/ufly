@@ -1,10 +1,11 @@
 {
   "name": "@ufly/tpl-module-js",
   "version": "0.6.5",
-  "description": "> @ufly/cli，配套创建 module 的 tpl",
+  "description": "> @ufly/cli，配套创建 JS 的 module 的 tpl",
   "keywords": [
-    "tpl",
-    "module"
+    "js",
+    "module",
+    "tpl"
   ],
   "author": "lamovv <lamovv@gmail.com>",
   "homepage": "https://github.com/lamovv/ufly",
@@ -21,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lamovv/ufly.git"
+    "url": "git+https://github.com/lamovv/ufly.git"
   },
   "bugs": {
     "url": "https://github.com/lamovv/ufly/issues"
@@ -29,7 +30,7 @@
   "dependencies": {
     "@ufly/util": "^0.6.5",
     "async": "^3.1.0",
-    "fs-extra": "~8.1.0",
+    "fs-extra": "~9.0.1",
     "handlebars": "^4.5.3",
     "metalsmith": "^2.3.0"
   },

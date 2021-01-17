@@ -12,10 +12,10 @@ const pkg = require('./package.json');
 
 function genCfg(options){
   return merge({
-    input: './src/index.ts',
+    input: 'src/index.ts',
     output: {
-      name: `${pkg.name}`,
-      file: 'dist/index.es.js',
+      
+      file: 'dist/index.esm.js',
       format: 'es',
       sourcemap: false
     },
@@ -43,7 +43,8 @@ export default useUmd ?
   genCfg({
     output: {
       file: 'dist/index.umd.js',
-      format: 'umd'
+      format: 'umd',
+      name: `${pkg.name}`
     }
   }): [
     genCfg(),

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es6",
+    "module": "esnext",
+    "allowJs": true,
+    "checkJs": false,
+    "isolatedModules": false,
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "pretty": true,
+    "removeComments": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
