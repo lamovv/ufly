@@ -1,8 +1,7 @@
 'use strict';
-const cmd = require('./cmd'); // TODO - 抽离
+const cmd = require('./cmd');
 
 function cli() {
   cmd();
 }
-
 module.exports = cli;

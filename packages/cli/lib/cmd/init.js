@@ -25,7 +25,6 @@ module.exports = {
   
   //处理子命令接受到的参数
   async handler(argv){
-    const prompts = [];
     const answers = {};
 
     const initInquirer = inquirers.splice(-1)[0];

@@ -11,12 +11,14 @@ const { getUser } = ugit;
 const tmpPath = path.join(os.homedir(), '.ufly/.authrc');
 
 function setting() {
-  let cache = getUser();
-  if (!cache.author || !cache.email) {
+  const gitUserInfo = getUser();
+  let { author, email } = gitUserInfo;
+
+  if (!author || !email) {
     if (fs.pathExistsSync(tmpPath)) {
-      const _cache = fs.readJsonSync(tmpPath);
-      cache.author = cache.author || _cache.author;
-      cache.email = cache.email || _cache.email;
+      const cache = fs.readJsonSync(tmpPath);
+      author = author || cache.author;
+      email = email || cache.email;
     }
   }
 
@@ -25,19 +27,32 @@ function setting() {
       type: 'input',
       name: 'author',
       message: 'author',
-      default: cache.author || '',
+      default: author || '',
+      when(answers) {
+        return !author;
+      }
     },
     {
       type: 'input',
       name: 'email',
       message: 'email',
-      default: cache.email || '',
-    },
+      default: email || '',
+      when(answers) {
+        return !email;
+      }
+    }
   ];
 
-  return inquirer.prompt(options).then((answers) => {
-    fs.outputJson(tmpPath, answers);
-    return answers;
+  return inquirer.prompt(options).then(answers => {
+    const userInfo = Object.assign(
+      {
+        author,
+        email
+      },
+      answers
+    );
+    fs.outputJson(tmpPath, userInfo);
+    return userInfo;
   });
 }
 

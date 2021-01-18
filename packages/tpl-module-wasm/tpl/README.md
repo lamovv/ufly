@@ -4,7 +4,10 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/lamovv/foo/badge.svg?branch=master)](https://coveralls.io/github/lamovv/foo?branch=master)
 
-- Need an API token for scripts or testing. [Generate a personal access token](https://github.com/settings/tokens/new) for quick access to the GitHub API.
+- 配置coveralls token
+  - [ADD REPO](https://coveralls.io/repos/new)，将关联的仓库置为`ON`，进入`DETAILS` 里查看`repo_token`
+  - 将 `repo_token` 配置到 `.coveralls.yml`：`repo_token: ua...`
+  
 ## Usage
 
 ```js
