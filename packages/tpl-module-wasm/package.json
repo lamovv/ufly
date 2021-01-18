@@ -1,6 +1,6 @@
 {
   "name": "@ufly/tpl-module-wasm",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "description": "> @ufly/cli，配套创建AssemblyScript to Wasm 的 module 的 tpl",
   "keywords": [
     "AssemblyScript",
@@ -32,7 +32,7 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "@ufly/util": "^0.6.7",
+    "@ufly/util": "^0.6.8",
     "async": "^3.1.0",
     "fs-extra": "~9.0.1",
     "handlebars": "^4.5.3",
