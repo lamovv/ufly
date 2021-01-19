@@ -1,7 +1,7 @@
 'use strict';
 import 'console-log-h5';
 
-import { compare } from 'compare';
+import { compare } from '{{name}}';
 
 document.addEventListener('click', e => {
     const action = e.target.getAttribute('data-action');
