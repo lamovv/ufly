@@ -1,6 +1,6 @@
 {
   "name": "@ufly/inquirer",
-  "version": "0.6.8",
+  "version": "0.6.10",
   "description": "> @ufly/cli，配套 inquirer 工具包",
   "keywords": [
     "ufly",
@@ -28,7 +28,7 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "@ufly/git": "^0.6.8",
+    "@ufly/git": "^0.6.10",
     "fs-extra": "^9.0.0",
     "inquirer": "^7.1.0"
   },
