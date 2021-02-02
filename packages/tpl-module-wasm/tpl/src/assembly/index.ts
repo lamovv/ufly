@@ -1,3 +1,8 @@
+/**
+ * @author {{author}}
+ * @date {{date}}
+ */
+
 // the env from JS
 @external('env', 'logi')
 declare function logi(v: i32): void;

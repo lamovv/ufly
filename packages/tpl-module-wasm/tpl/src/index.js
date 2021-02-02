@@ -1,3 +1,8 @@
+/**
+ * @author {{author}}
+ * @date {{date}}
+ */
+
 'use strict';
 import instantiate from './assembly/index.ts';
 

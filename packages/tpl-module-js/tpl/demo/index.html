@@ -1,25 +1,35 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<title>Demo</title>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
-<style>
-    html,body { margin: 0; padding: 0; height: 100vh;}
-    body { padding: .2rem; font-family: -apple-system, 'Helvetica', 'Hiragino Sans GB W3', arial, sans-serif;background-color: #fff;display: flex; flex-direction: column;}
-    h1{ font-size: .6rem; text-align: center; margin-bottom: 1rem;}
-    button{ margin-top: .12rem;padding: .12rem;font-size: .26rem;color: #fff;box-sizing: border-box;border: 0;outline: none;border-radius: .12rem;background: #1890ff;}
-    button:hover{ background: #40a9ff; }
-    button:active { background:#096dd9;}
-</style>
-<script>
-var screenWidth = window.screen.width;
-var uiWidth = 750;
-document.documentElement.style.fontSize = (screenWidth / uiWidth) * 100 + 'px';
-document.documentElement.style.lineHeight = 0;
-</script>
+    <meta http-equiv="charset" content="utf-8"/>
+    <meta name="author" content="{{author}}"/>
+    <meta name="keywords" content="{{name}},demo,case"/>
+    <meta name="description" content="{{name}} case"/>
+    <title>Demo</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <style>
+        html,body { margin: 0; padding: 0; height: 100vh;}
+        body { padding: .2rem; font:.16rem/1.5 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'miui', 'Roboto', 'Noto Sans S Chinese', 'Hiragino Sans GB W3', Arial, sans-serif; background-color: #fff; display: flex; flex-direction: column;}
+        h1{ font-size: .64rem; text-align: center; margin-bottom: .32rem;}
+        button{ padding: 0.14rem; margin-bottom: .14rem; font-size:.28rem; color: #fff; box-sizing: border-box; border: 0; outline: none; border-radius: .1rem; background: #1890ff;}
+        button:hover{ background: #40a9ff; }
+        button:active { background:#096dd9;}
+    </style>
+    <script>
+    (function (d, w) {
+        var uiWidth = 7.5;  // 设计稿 750px;
+        var de = document.documentElement;
+        var e = 'orientationchange' in window ? 'orientationchange':'resize';
+    
+        function setRFS() {
+            var cw = de.clientWidth;
+            de.style.fontSize = cw/uiWidth +'px';
+        };
+        d.addEventListener && (w.addEventListener(e, setRFS, !1), d.addEventListener('DOMContentLoaded', setRFS, !1))
+    })(document, window);
+    </script>
 </head>
-<body data-noaplus="true">
+<body>
     <h1>Case</h1>
 
     <button data-action="compare">compare</button>
