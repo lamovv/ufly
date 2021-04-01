@@ -99,6 +99,7 @@ function setting(tpls, type) {
 
   return inquirer.prompt(options).then(answers => {
     fs.outputJson(tmpPath, answers);
+
     if (isdef) {
       return Object.assign(
         {

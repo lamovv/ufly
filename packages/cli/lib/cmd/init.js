@@ -6,6 +6,8 @@ const chalk = require('chalk');
 const sh = require("@ufly/shell");
 const tpls = require('@ufly/tpm');
 const inquirers = require('@ufly/inquirer');
+const ugit = require('@ufly/git');
+const { addRemote } = ugit;
 
 module.exports = {
   command: 'init [-t] [type]',
@@ -39,7 +41,8 @@ module.exports = {
     const {
       isCurrent,
       dirName,
-      projectType: pType
+      projectType: pType,
+      repository
     } = answers;
 
     const spinner = ora({color: 'green'}).start(`${chalk.magenta(`${pType} 创建中...`)}`);
@@ -69,6 +72,11 @@ module.exports = {
     }
 
     if(!err){
+      // 自动加入git remote
+      if(repository){
+        addRemote(repository);
+      }
+
       spinner.succeed(`${chalk.green(`${answers.name} ${pType} 已创建完成`)}`);
       const initAnswer = await initInquirer();
       if(initAnswer.isInit){

@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 使用本地模块 --no-install
+npx --no-install lint-staged

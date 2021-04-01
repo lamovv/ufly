@@ -30,8 +30,8 @@
   "dependencies": {
     "@ufly/util": "^0.6.10",
     "async": "^3.1.0",
-    "fs-extra": "~9.0.1",
-    "handlebars": "^4.5.3",
+    "fs-extra": "~9.1.0",
+    "handlebars": "^4.7.7",
     "metalsmith": "^2.3.0"
   },
   "publishConfig": {

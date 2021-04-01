@@ -3,17 +3,18 @@ const ip = require('ip');
 const path = require('path');
 const webpack = require('webpack');
 const pkg = require('./package.json');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const isProd = process.env.NODE_ENV != 'development';
+const isProd = process.env.NODE_ENV == 'production';
 
 // Web Server 协议、端口号配置，默认 http:、80
 const prototol = 'http:';
 const port = 80;
 
 module.exports = {
-  context: __dirname,
-  devtool: isProd ? 'cheap-module-source-map':'source-map', //cheap-module-eval-source-map
-  // devtool: false,
+  // devtool: isProd ? 'cheap-module-source-map':'source-map', //cheap-module-eval-source-map
+  devtool: 'source-map',
   entry: {
     'demo/index': './demo/index.js'
   },
@@ -25,6 +26,9 @@ module.exports = {
     library: pkg.name,
     libraryExport: 'default',
     umdNamedDefine: true,
+  },
+  optimization: {
+    minimize: isProd,
   },
   stats: {
     modules: false,
@@ -58,12 +62,28 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './demo/index.html',
+      filename: '[name].html',
+      inject: 'body'
+    })
+  ].concat(isProd ? [
+    new MiniCssExtractPlugin()
+  ]: [
     new webpack.HotModuleReplacementPlugin(),
-  ],
+  ]),
   watchOptions: {
     ignored: /node_modules/,
     //  aggregateTimeout: 300,  // 文件变更触发重新构建的 防抖 延时配置
@@ -73,9 +93,10 @@ module.exports = {
     hot: true,
     watchContentBase: true,
     // 允许手机绑定本地代理服务后访问，与 disableHostCheck: true 组合使用
+    // host: `${ip.address()}`,
     host: '0.0.0.0',
     port,
-    openPage: `${prototol}//${ip.address()}${port == 80 ? '': `:${port}`}`,  // 同网段内，手机可直接访问无需代理
+    openPage: `${prototol}//${ip.address()}${port == 80 ? '': `:${port}`}/dist/demo/index.html`,  // 同网段内，手机可直接访问无需代理
     disableHostCheck: true,
     // 与 host: '0.0.0.0' 配合使用，在 disableHostCheck: true 未开启时，配置可访问服务的域名白名单
     // allowedHosts: [

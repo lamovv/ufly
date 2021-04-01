@@ -27,7 +27,7 @@
     "@ufly/tpl-module-js": "^0.6.10",
     "@ufly/tpl-module-ts": "^0.6.10",
     "@ufly/tpl-module-wasm": "^0.6.10",
-    "fs-extra": "^9.0.0"
+    "fs-extra": "^9.1.0"
   },
   "publishConfig": {
     "access": "public"

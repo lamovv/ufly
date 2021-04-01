@@ -4,21 +4,26 @@
   "workspaces": [
     "packages/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamovv/ufly.git"
+  },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "babel-eslint": "^10.1.0",
     "conventional-changelog-cli": "^2.1.1",
-    "eslint": "^7.18.0",
+    "eslint": "^7.23.0",
     "esprima": "^4.0.1",
-    "husky": "^4.3.8",
+    "husky": "^6.0.0",
     "lerna": "^3.22.1",
-    "lint-staged": "^10.5.3",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1"
   },
   "scripts": {
+    "prepare": "husky install",
     "bootstrap": "npm run init",
-    "init": "npm run clean && yarn install --ignore-scripts && lerna bootstrap --force-local",
+    "init": "npm run clean && yarn install --ignore-scripts && lerna bootstrap --force-local && npm run prepare",
     "clean": "rm -rf node_modules && lerna clean -y",
     "debug": "node --inspect packages/cli/bin/cli init",
     "debug:brk": "node --inspect-brk packages/cli/bin/cli init",

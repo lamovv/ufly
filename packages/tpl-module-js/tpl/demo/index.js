@@ -1,5 +1,5 @@
-'use strict';
 import 'console-log-h5';
+import './index.scss';
 
 import { compare } from '{{name}}';
 

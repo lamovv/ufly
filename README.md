@@ -23,13 +23,16 @@ $ ufly -h
 3. 初始化项目：
 
   ```sh
-  $ cd repo // 进入项目目录
-  $ ufly init // 使用cli初始化项目
+  $ cd repo
+  $ ufly init
   ```
 4. 配置coveralls token
   - [ADD REPO](https://coveralls.io/repos/new)，将关联的仓库on，details里查看token
   - 将 repo_token 复制进 `.coveralls.yml`：`repo_token: ua...`
 
-## Debug
+##### 备注
+
+
+## Dev
 1. debug模式启动：`npm run debug`
 2. 打开Chrome调试：`chrome://inspect`，点击 inspect，打开 devtools
