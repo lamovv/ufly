@@ -5,6 +5,9 @@
 ![](./ufly.png)
 
 ## Usage
+@ufly/cli 脚本命令自动检测更新升级，目前支持创建基于JS、TS、AssemblyScript开发wasm 三语言的模块开发。将本地开发(dev)、npm包发布(pub)与代码管理(git)做到了简易命令化、规范化。同时，结合 git hook、prettier、eslint、commitlint等将代码格式化、校验、规范commit、记录changelog与发包版本处理等自动化。
+
+
 全局安装
 
 ```bash
@@ -29,9 +32,6 @@ $ ufly -h
 4. 配置coveralls token
   - [ADD REPO](https://coveralls.io/repos/new)，将关联的仓库on，details里查看token
   - 将 repo_token 复制进 `.coveralls.yml`：`repo_token: ua...`
-
-##### 备注
-
 
 ## Dev
 1. debug模式启动：`npm run debug`
