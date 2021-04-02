@@ -32,17 +32,10 @@ fetch('/api/getData.json')
 3. `npm run dev`启动server后，可访问：`http://localhost/coverage` 查看报告页面
 
 ## Dev
-1. 默认使用`yarn`安装npm包，若无请先安装：`npm i -g yarn`
-2. 初始化环境：`npm run init`
-3. 启动开发服务：`npm run dev`
+- 初始化环境：`npm run init`
+- 启动开发：`npm run dev`
   - 自动打开浏览器：`npm run dev:open`
   - 若提示80端口被占用问题，可注掉或修改 webpack.config.js 的 port
-4. 构建：：`npm run build`
-  - 默认构建cjs与es6 module
-  - 若全部构建：`$ npm run build:all`
-5. 使用命令可一步完成git push提交：`$ npm run push -- "your-commit-message"`
-  - your-commit-message：为git commit提交时的message，自行输入
-  - 如：`$ npm run push -- "feat(scope): add yy"`
-  - **message格式参照 `commitlint.config.js` 规范提交**
-6. 使用命令可一步完成提交git并发布npm包：`npm run pub -- "your-commit-message"`
-  - 还可指定npm包版本位(patch|minor|major)，默认为patch，自动+1：`npm run pub -- "your-commit-message" -v minor`
+- 编译构建：`npm run build`
+- 发布：`npm run pub`
+  - 发布beta包：`npm run beta`

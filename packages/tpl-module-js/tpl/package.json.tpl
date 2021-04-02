@@ -79,7 +79,7 @@
     "build": "run-p clean prettier test build:es build:types && rm ./dist/index.js",
     "build:es": "rollup -c --silent",
     "build:umd": "cross-env NODE_FORMAT=umd rollup -c --silent",
-    "build:all": "npm run build & npm run build:umd",
+    "build:all": "run-p build:umd build",
     "build:wpk": "cross-env NODE_ENV=production webpack --mode=production",
     "build:types": "tsc",
     "dev": "webpack serve --mode=development",

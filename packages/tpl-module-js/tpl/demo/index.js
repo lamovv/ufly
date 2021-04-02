@@ -1,5 +1,5 @@
-import 'console-log-h5';
 import './index.scss';
+import 'console-log-h5';
 
 import { compare } from '{{name}}';
 

@@ -1,0 +1,27 @@
+@import './reset.css';
+@import './_fn';
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: px2rem(30) px2rem(20);
+}
+h1{
+  font-size: px2rem(64);
+  text-align: center; 
+  margin-bottom: px2rem(32);
+}
+button{ 
+  padding: px2rem(14); 
+  margin-bottom: px2rem(14); 
+  font-size: px2rem(28); 
+  color: #fff; 
+  box-sizing: border-box; 
+  border: 0; 
+  outline: none; 
+  border-radius: px2rem(10); 
+  background: #1890ff;
+}
+button:hover{ background: #40a9ff; }
+button:active { background:#096dd9;}

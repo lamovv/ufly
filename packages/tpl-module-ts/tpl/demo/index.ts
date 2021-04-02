@@ -1,4 +1,4 @@
-'use strict';
+import './index.scss';
 import 'console-log-h5';
 
 import {

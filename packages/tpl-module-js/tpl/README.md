@@ -35,6 +35,7 @@ fetch('/api/getData.json')
 - 初始化环境：`npm run init`
 - 启动开发：`npm run dev`
   - 自动打开浏览器：`npm run dev:open`
+  - 若提示80端口被占用问题，可注掉或修改 webpack.config.js 的 port
 - 编译构建：`npm run build`
 - 发布：`npm run pub`
   - 发布beta包：`npm run beta`

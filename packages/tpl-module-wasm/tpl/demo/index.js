@@ -1,8 +1,11 @@
-'use strict';
+import './index.scss';
 import 'console-log-h5';
 import {
   compareVersion
 } from '{{name}}';
+
+const r = async () => await compareVersion('1.2.0', '1.2.1');
+console.log(r);
 
 document.addEventListener('click', async e => {
   const action = e.target.getAttribute('data-action');

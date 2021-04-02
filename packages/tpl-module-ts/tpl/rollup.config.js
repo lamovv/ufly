@@ -17,7 +17,7 @@ function genCfg(options){
       
       file: 'dist/index.esm.js',
       format: 'es',
-      sourcemap: false
+      sourcemap: true
     },
     // 指出应将哪些模块视为外部模块
     external: id => {
