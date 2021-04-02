@@ -1,6 +1,6 @@
 {
   "name": "@ufly/cli",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "> Use the ufly command line tools to quickly create a dev env for modules and app.",
   "bin": {
     "ufly": "bin/cli"
@@ -36,10 +36,10 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "@ufly/git": "^0.7.0",
-    "@ufly/inquirer": "^0.7.0",
-    "@ufly/shell": "^0.7.0",
-    "@ufly/tpm": "^0.7.0",
+    "@ufly/git": "^0.7.1",
+    "@ufly/inquirer": "^0.7.1",
+    "@ufly/shell": "^0.7.1",
+    "@ufly/tpm": "^0.7.1",
     "chalk": "~4.1.0",
     "figlet": "^1.3.0",
     "fs-extra": "~9.1.0",
