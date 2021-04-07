@@ -86,7 +86,7 @@
     "dev:open": "webpack serve --mode=development --open",
     "prepub": "run-s updatev build",
     "prebeta": "run-s updatev:beta build",
-    "postpub": "git push --follow-tags origin master",
+    "postpub": "git push --follow-tags",
     "publatest": "npm publish --access=public",
     "pubeta": "npm publish --access=public --tag beta",
     "pub": "run-s publatest sync",

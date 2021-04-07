@@ -14,6 +14,6 @@ module.exports = {
         })
       )
     );
-    log(chalk.hex('#bae637').bold('\nCommand line tools to quickly create a dev env for modules and app'));
+    log(chalk.hex('#bae637').bold('\nA command line tool for creating modules and app development templates.\n'));
   }
 }
