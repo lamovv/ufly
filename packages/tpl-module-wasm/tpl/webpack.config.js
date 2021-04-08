@@ -16,6 +16,12 @@ module.exports = {
     libraryTarget: 'commonjs-module', // ES2015 module wrapped in CommonJS
     library: pkg.name
   },
+  optimization: {
+    minimize: isProd,
+    // // 生产环境默认都是可持久缓存的数字。开启配置使用 友好可读性高的 id，模块名比数字更易读
+    // moduleIds: 'named',  // bundle内依赖模块名，如：386 -> './node_modules/foo/lib/index.js'
+    // chunkIds: 'named',  // entry之外打包生成的chunk文件名，如：286.js -> src_a_js.js
+  },
   stats: {
     modules: false,
   },
