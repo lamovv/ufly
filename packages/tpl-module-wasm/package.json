@@ -34,6 +34,7 @@
   "dependencies": {
     "@ufly/util": "^0.7.1",
     "async": "^3.1.0",
+    "clean-before-html-webpack-plugin": "^1.0.1",
     "fs-extra": "~9.1.0",
     "handlebars": "^4.7.7",
     "metalsmith": "^2.3.0"

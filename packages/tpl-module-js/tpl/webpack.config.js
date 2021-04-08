@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const pkg = require('./package.json');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanBeforeHtmlWebpackPlugin = require('clean-before-html-webpack-plugin');
 
 const isProd = process.env.NODE_ENV == 'production';
 
@@ -83,6 +84,12 @@ module.exports = {
       inject: 'body'
     })
   ].concat(isProd ? [
+    new CleanBeforeHtmlWebpackPlugin({
+      patterns: [{
+        match: '<script src="../dist/demo/index.js"></script>',
+        replacement: ''
+      }]
+    }),
     new MiniCssExtractPlugin()
   ]: [
     new webpack.HotModuleReplacementPlugin(),
