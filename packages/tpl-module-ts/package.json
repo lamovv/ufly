@@ -1,6 +1,6 @@
 {
   "name": "@ufly/tpl-module-ts",
-  "version": "0.7.3",
+  "version": "0.7.7",
   "description": "> @ufly/cli，配套创建 Typescript 的 module 的 tpl",
   "keywords": [
     "typescript",
@@ -28,7 +28,7 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "@ufly/util": "^0.7.3",
+    "@ufly/util": "^0.7.7",
     "async": "^3.1.0",
     "fs-extra": "~9.1.0",
     "handlebars": "^4.7.7",
