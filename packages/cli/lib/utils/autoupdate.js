@@ -25,9 +25,7 @@ async function autoUpdate() {
   const packageFile = path.join(__dirname, '../../package.json');
   const pkg = require(packageFile);
 
-  const registry = sh.exec('npm config get registry', {silent: true}).stdout;
   const r = await updater({
-    registry,
     package: pkg,
     level: 'major',
     interval: '1d',
@@ -38,7 +36,6 @@ async function autoUpdate() {
     if (V_LELVEL[r.type] <= vLevel) {
       const spinner = ora({color: 'green'}).start(`${chalk.magenta(`发现新版本 ${ chalk.red(`${r.name}@${r.version}`)}，自动升级中，请稍候...\n`)}`);
       execSync(`npm i ${r.name} -g`, { stdio: 'inherit' });
-      console.log(`ufly ${argv.join(' ')}`);
       spinner.succeed(`${chalk.green('升级完成，请重新执行命令: ')}${chalk.yellow(`ufly ${argv.join(' ')}`)}\n`);
       return false;
       // exec(`npm i ${r.name} -g`, (err, stdout) => {
