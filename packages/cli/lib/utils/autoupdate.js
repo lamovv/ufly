@@ -1,4 +1,4 @@
-const fs = require('fs-extra');
+const sh = require('shelljs');
 const path = require('path');
 const chalk = require('chalk');
 const ora = require('ora');
@@ -25,7 +25,9 @@ async function autoUpdate() {
   const packageFile = path.join(__dirname, '../../package.json');
   const pkg = require(packageFile);
 
+  const registry = sh.exec('npm config get registry', {silent: true}).stdout;
   const r = await updater({
+    registry,
     package: pkg,
     level: 'major',
     interval: '1d',

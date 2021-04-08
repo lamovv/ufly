@@ -1,9 +1,7 @@
-const fse = require('fs-extra');
-const path = require('path');
 const ora = require('ora');
 const chalk = require('chalk');
 
-const sh = require("@ufly/shell");
+const sh = require('@ufly/shell');
 const tpls = require('@ufly/tpm');
 const inquirers = require('@ufly/inquirer');
 const ugit = require('@ufly/git');
