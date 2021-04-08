@@ -109,7 +109,7 @@ module.exports = {
     // host: `${ip.address()}`,
     host: '0.0.0.0',
     port,
-    openPage: `${prototol}//${ip.address()}${port == 80 ? '': `:${port}`}/dist/demo/index.html`,  // 同网段内，手机可直接访问无需代理
+    openPage: `${prototol}//${ip.address()}${port == 80 ? '': `:${port}`}`,  // 同网段内，手机可直接访问无需代理
     disableHostCheck: true,
     // 与 host: '0.0.0.0' 配合使用，在 disableHostCheck: true 未开启时，配置可访问服务的域名白名单
     // allowedHosts: [

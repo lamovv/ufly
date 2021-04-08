@@ -43,6 +43,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.1.0",
+    "clean-before-html-webpack-plugin": "^1.0.1",
     "cnpm": "^6.1.1",
     "console-log-h5": "^1.1.1",
     "conventional-changelog-cli": "^2.1.1",
