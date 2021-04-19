@@ -50,20 +50,19 @@ function genCfg(options){
   }, options);
 }
 
-const useUmd = process.env.NODE_FORMAT == 'umd';
-export default useUmd ? 
+export default [
+  genCfg(),
+  genCfg({
+    output: {
+      file: 'dist/index.cjs.js',
+      format: 'cjs',
+    }
+  }),
   genCfg({
     output: {
       file: 'dist/index.umd.js',
       format: 'umd',
       name: `${pkg.name}`
     }
-  }): [
-    genCfg(),
-    genCfg({
-      output: {
-        file: 'dist/index.cjs.js',
-        format: 'cjs',
-      }
-    })
-  ]
+  })
+]

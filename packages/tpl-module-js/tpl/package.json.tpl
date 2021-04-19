@@ -5,7 +5,7 @@
   "keywords": [
     "{{keywords}}"
   ],
-  "browser": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -77,11 +77,9 @@
     "updatev:beta": "standard-version --prerelease beta --skip.changelog --skip.tag",
     "clean": "rm -rf dist",
     "prettier": "prettier --write ./src",
-    "build": "run-p clean prettier test build:es build:types && rm ./dist/index.js",
-    "build:es": "rollup -c --silent",
-    "build:umd": "cross-env NODE_FORMAT=umd rollup -c --silent",
-    "build:all": "run-p build:umd build",
-    "build:wpk": "cross-env NODE_ENV=production webpack --mode=production",
+    "build": "run-p clean prettier test build:pkg build:types && rm ./dist/index.js",
+    "build:pkg": "rollup -c --silent",
+    "build:demo": "cross-env NODE_ENV=production webpack --mode=production",
     "build:types": "tsc",
     "dev": "webpack serve --mode=development",
     "dev:open": "webpack serve --mode=development --open",

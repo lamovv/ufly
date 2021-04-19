@@ -39,3 +39,5 @@ fetch('/api/getData.json')
 - 编译构建：`npm run build`
 - 发布：`npm run pub`
   - 发布beta包：`npm run beta`
+
+- 打包demo：`npm run build:demo`
