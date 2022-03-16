@@ -4,20 +4,19 @@
     "target": "es5",
     "module": "esnext",
     "lib":[
-      "es6",
+      "esnext",
       "dom"
     ],
     "allowJs": true,
     "checkJs": false,
-    "isolatedModules": false,
     "noImplicitAny": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "declaration": true,
     "declarationDir": "./dist",
     "rootDir": "./src",
     "outDir": "./dist",
-    "moduleResolution": "node",
     "pretty": true,
+    "isolatedModules": false,
     "removeComments": true,
     "downlevelIteration": true,
     "esModuleInterop": true

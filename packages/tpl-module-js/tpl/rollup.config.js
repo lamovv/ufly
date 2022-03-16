@@ -35,7 +35,11 @@ function genCfg(options){
         exclude: 'node_modules/**',
         presets: [
           ['@babel/preset-env', {
-            modules: false
+            modules: false,
+            // // 排除 typeof 垫片
+            // exclude: [
+            //   'transform-typeof-symbol'
+            // ]
           }]
         ],
         plugins: [

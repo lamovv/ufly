@@ -4,7 +4,7 @@ module.exports = {
   jsxBracketSameLine: true, //使多行JSX元素最后一行末尾的 > 单独一行
   printWidth: 1000, // 不自动换行
   proseWrap: 'never', // 代码不自动折行
-  quoteProps: 'preserve', // 对象中的属性引号，保持代码风格不变
+  quoteProps: 'as-needed', // 仅在需要的时候使用
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'es5', // 数组、对象最后一个元素尾不带逗号
