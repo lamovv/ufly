@@ -17,30 +17,9 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lamovv/ufly.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "clean": "rm -rf dist",
-    "prepare": "husky install",
-    "init": "npm run clean && rm -rf node_modules && yarn install -s --force && npm run prepare",
-    "updatev": "standard-version --release-as patch",
-    "updatev:beta": "standard-version --prerelease beta --skip.changelog --skip.tag",
-    "prepub": "run-s updatev build",
-    "prebeta": "run-s updatev:beta build",
-    "postpub": "git push --follow-tags",
-    "publatest": "npm publish --access=public",
-    "pubeta": "npm publish --access=public --tag beta",
-    "pub": "run-s publatest sync",
-    "beta": "run-s pubeta sync",
-    "sync": "cnpm sync",
-    "dev": "cross-env HTTPS=1 sam dumi",
-    "build": "father-build"
   },
   "bugs": {
     "url": "https://github.com/lamovv/ufly/issues"
@@ -51,5 +30,8 @@
     "fs-extra": "^9.1.0",
     "handlebars": "^4.7.7",
     "metalsmith": "^2.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
