@@ -1,6 +1,6 @@
 {
   "name": "@ufly/tpl-module-js",
-  "version": "0.7.10",
+  "version": "0.7.11",
   "description": "> @ufly/cli，配套创建 JS 的 module 的 tpl",
   "keywords": [
     "js",
