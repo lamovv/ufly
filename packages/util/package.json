@@ -1,6 +1,6 @@
 {
   "name": "@ufly/util",
-  "version": "0.7.10",
+  "version": "0.7.12",
   "description": "> @ufly/cli，配套 utils 工具包",
   "keywords": [
     "util"
