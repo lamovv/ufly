@@ -31,10 +31,10 @@ function setting(tpls, type) {
       type: 'input',
       name: 'dirName',
       default: cache.dirName || '',
-      message: '请输入目录名，用于创建项目：',
+      message: '输入目录名，用于创建项目：',
       validate(input) {
         if (!input) {
-          return '请指定要创建的目录名';
+          return '指定要创建的目录名';
         }
         return true;
       },
@@ -46,26 +46,39 @@ function setting(tpls, type) {
     {
       type: 'rawlist',
       name: 'projectType',
-      message: '请选择项目类型：',
+      message: '选择项目类型：',
       choices: types,
       validate(input) {
         if (!tpls[input]) {
           return `${input} 暂不支持，建设中...请选择其他项创建`;
         }
         return true;
+      }
+    },
+    {
+      type: 'input',
+      name: 'scope',
+      default: cache.scope || '',
+      message: 'npm包scope：',
+      filter(input) {
+        if (input) {
+          input = /^@/.test(input) ? input : `@${input}`;
+          return /\/$/.test(input) ? input : `${input}/`;
+        }
+        return '';
       },
       when(answers) {
-        return !isdef;
+        return /^module|component/.test(answers.projectType);
       }
     },
     {
       type: 'input',
       name: 'name',
       default: cache.name || '',
-      message: '项目名：',
+      message: '名称：',
       validate(input) {
         if (!input) {
-          return '请指定项目名';
+          return '指定应用或组件模块名';
         }
         return true;
       }

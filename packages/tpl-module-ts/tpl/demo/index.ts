@@ -3,7 +3,7 @@ import 'console-log-h5';
 
 import {
   empty
-} from '{{name}}';
+} from '{{scope}}{{name}}';
 
 
 document.addEventListener('click', e => {

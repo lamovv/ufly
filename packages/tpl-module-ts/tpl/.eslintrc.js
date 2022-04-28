@@ -21,6 +21,10 @@
 module.exports = {
   // 根目录标识
   root: true, // 标识当前配置文件为eslint的根配置文件，让其停止在父级目录中继续寻找
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+  ],
   parser: '@typescript-eslint/parser', //解析器
   parserOptions: {
     sourceType: 'module', //指定JS代码来源的类型，script(script标签引入？) | module（es6的module模块）
@@ -33,10 +37,6 @@ module.exports = {
       // jsx: true, //启用jsx语法
     },
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-  ],
   // 插件，类似于解析器，用以扩展解析器的功能，用于检测非常规的js代码，也会新增一些特定的规则
   // 配置插件时，需省略前缀「eslint-plugin-」
   plugins: [

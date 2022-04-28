@@ -15,7 +15,7 @@ function cmd() {
     .alias('v', 'version')
     .example('ufly init', '创建项目')
     .default('help')
-    .epilog('copyright 2020')
+    .epilog('copyright 2022')
     .argv;
 }
 

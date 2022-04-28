@@ -11,7 +11,7 @@
     "checkJs": false,
     "isolatedModules": false,
     "noImplicitAny": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "declaration": true,
     "declarationDir": "./dist",
     "rootDir": "./src",

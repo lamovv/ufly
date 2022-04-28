@@ -19,8 +19,8 @@ module.exports = {
       describe: '项目类型',
       type: 'string'
     })
-    .usage('Usage: init [options]')
-    .example('init -t module-js', '直接创建js module')
+      .usage('Usage: init [options]')
+      .example('init -t module-js', '直接创建js module')
   },
   
   //处理子命令接受到的参数
@@ -79,11 +79,11 @@ module.exports = {
       const initAnswer = await initInquirer();
       if(initAnswer.isInit){
         spinner.start(`${chalk.magenta('正在安装依赖等初始化操作...\n')}`);
-        const done = await sh.exec.npmrun('init -s').catch(e => {
+        const done = await sh.exec.npmrun('i -s').catch(e => {
           spinner.fail(`${chalk.red(`安装依赖等初始化操作失败，请手动执行 ${chalk.yellow.bold('npm run init')} 完成`)}`);
         });
         if(done){
-          spinner.succeed(`${chalk.green(`${answers.name} ${pType} 已初始化完成，请执行 ${chalk.yellow.bold(' npm run dev:open ')} 进入开发`)}\n`);
+          spinner.succeed(`${chalk.green(`${answers.name} ${pType} 已初始化完成，请执行 ${chalk.yellow.bold(' yarn dev ')} 进入开发`)}\n`);
         }
       }
     }

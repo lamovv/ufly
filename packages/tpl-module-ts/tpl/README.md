@@ -1,4 +1,4 @@
-# `{{name}}`
+# `{{scope}}{{name}}`
 
 > {{description}}
 
@@ -13,7 +13,7 @@
 ```js
 import {
   empty
-} from '{{name}}';
+} from '{{scope}}{{name}}';
 // result true
 empty([]);
 ```
@@ -29,15 +29,21 @@ fetch('/api/getData.json')
 ## TC
 1. `__test__` 编写Test Case
 2. `npm run test` 运行测试用户并生成报告
-3. `npm run dev`启动server后，可访问：`http://localhost/coverage` 查看报告页面
 
-## Dev
-- 初始化环境：`npm run init`
-- 启动开发：`npm run dev`
-  - 自动打开浏览器：`npm run dev:open`
-  - 若提示80端口被占用问题，可注掉或修改 webpack.config.js 的 port
-- 编译构建：`npm run build`
-- 发布：`npm run pub`
-  - 发布beta包：`npm run beta`
+## 开发步骤
+1. 安装依赖
 
-- 打包demo：`npm run build:demo`
+    ```bash
+    yarn
+    ```
+2. 启动本地开发服务
+
+    ```bash
+    yarn dev
+    ```
+
+## 发包
+- alpha包：`$ yarn alpha`
+- beta包：`$ yarn beta`
+- release包：`$ yarn release`
+  - 同时，会打git tag并提交

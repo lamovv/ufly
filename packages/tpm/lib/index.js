@@ -4,6 +4,7 @@
 // const tplPath = path.join(os.homedir(), '.ufly/.tplrc');
 // // tplname : tpl-package
 let tplrc = {
+  'component-react': '@ufly/tpl-component-react',
   'module-js': '@ufly/tpl-module-js',
   'module-ts': '@ufly/tpl-module-ts',
   'module-wasm': '@ufly/tpl-module-wasm',

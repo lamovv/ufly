@@ -1,7 +1,7 @@
 import './index.scss';
 import 'console-log-h5';
 
-import { compare } from '{{name}}';
+import { compare } from '{{scope}}{{name}}';
 
 document.addEventListener('click', e => {
     const action = e.target.getAttribute('data-action');

@@ -15,7 +15,7 @@ exports.npmrun = async script =>
     // }
 
     shell.exec(
-      `npm run ${script}`,
+      `yarn ${script}`,
       {
         async: true,
         silent: true

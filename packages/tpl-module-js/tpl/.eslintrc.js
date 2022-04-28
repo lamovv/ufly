@@ -21,7 +21,9 @@
 module.exports = {
   // 根目录标识
   root: true, // 标识当前配置文件为eslint的根配置文件，让其停止在父级目录中继续寻找
-  extends: ['eslint:recommended'],
+  extends: [
+    'eslint:recommended',
+  ],
   parser: 'babel-eslint', //解析器
   parserOptions: {
     sourceType: 'module', //指定JS代码来源的类型，script(script标签引入？) | module（es6的module模块）
@@ -34,6 +36,9 @@ module.exports = {
       // jsx: true, //启用jsx语法
     },
   },
+  // 插件，类似于解析器，用以扩展解析器的功能，用于检测非常规的js代码，也会新增一些特定的规则
+  // 配置插件时，需省略前缀「eslint-plugin-」
+  plugins: [],
   // 运行环境，一个环境定义了一组预定义的全局变量，为跳过对其的定义检测
   env: {
     commonjs: true,
@@ -50,9 +55,6 @@ module.exports = {
     test: false,
     expect: false
   },
-  // 插件，类似于解析器，用以扩展解析器的功能，用于检测非常规的js代码，也会新增一些特定的规则
-  // 配置插件时，需省略前缀「eslint-plugin-」
-  plugins: [],
   // 规则继承
   /**
   * 自定义规则 @link http://eslint.cn/docs/user-guide/configuring#configuring-rules
