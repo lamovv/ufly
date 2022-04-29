@@ -22,8 +22,7 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "bootstrap": "npm run init",
-    "init": "npm run clean && yarn install --ignore-scripts && lerna bootstrap --force-local && npm run prepare",
+    "i": "npm run clean && yarn install --ignore-scripts && lerna bootstrap --force-local && npm run prepare",
     "clean": "rm -rf node_modules && lerna clean -y",
     "debug": "node --inspect packages/cli/bin/cli init",
     "debug:brk": "node --inspect-brk packages/cli/bin/cli init",
@@ -34,6 +33,7 @@
     "pub": "lerna publish",
     "pub:all": "lerna publish --force-publish",
     "pub:beta": "lerna publish --canary --preid beta",
-    "rebuild": "yarn install --force"
+    "rebuild": "yarn install --force",
+    "sync": "cd packages/cli/ && yarn sync"
   }
 }

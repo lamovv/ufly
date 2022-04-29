@@ -1,15 +1,17 @@
+import type { FC } from 'react';
 import { useEffect } from 'react';
 import Controlled from './controlled';
 import Stateless from './stateless';
 import { useControl } from './hooks';
 import styles from './index.module.scss';
 
+type TChange = (v: number) => void;
 export interface IComponent {
   readonly defaultValue?: number;
-  onChange?: (v: number) => void;
+  onChange?: TChange;
 }
 
-const Component = ({ defaultValue = 1, onChange = () => {} }: IComponent) => {
+const Component: FC<IComponent> = ({ defaultValue = 1, onChange = _ => _ }) => {
   const { val, onPlus, onMinus, onClear, onChange: _onChange } = useControl(defaultValue);
 
   useEffect(() => {
@@ -25,7 +27,9 @@ const Component = ({ defaultValue = 1, onChange = () => {} }: IComponent) => {
         onClear={onClear}
         onChange={_onChange}
       />
-      <Stateless text={val} />
+      <Stateless
+        text={val}
+      />
     </div>
   );
 };

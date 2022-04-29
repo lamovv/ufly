@@ -30,7 +30,7 @@ $ ufly -h
   $ ufly init
   ```
 
-  在初始化项目前，可执行命令检测下自己的yarn仓库源：`yarn config get registry`，建议切换国内源提升依赖安装效率：`yarn config set registry https://registry.npm.taobao.org/`
+  在初始化项目前，可执行命令检测下自己的yarn仓库源：`yarn config get registry`，建议切换国内源提升依赖安装效率：`yarn config set registry https://registry.npmmirror.com`
 
 4. 配置coveralls token
   - [ADD REPO](https://coveralls.io/repos/new)，将关联的仓库on，details里查看token

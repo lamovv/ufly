@@ -1,14 +1,15 @@
 /**
  * 无状态组件 - 纯UI组件
  */
-import styles from './index.module.scss';
+ import type { FC } from 'react';
+ import styles from './index.module.scss';
 
- interface IPure {
-   text: string | number;
+  interface IPure {
+    text: string | number;
+  }
+
+ const Stateless: FC<IPure> = ({ text }) => {
+   return <span className={styles.text}>当前值：{text}</span>;
  }
 
-function Stateless({ text }: IPure) {
-  return <span className={styles.text}>当前值：{text}</span>;
-}
-
-export default Stateless;
+ export default Stateless;

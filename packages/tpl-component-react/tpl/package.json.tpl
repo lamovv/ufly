@@ -45,6 +45,7 @@
   "scripts": {
     "i": "yarn install -s --force",
     "dev": "cross-env HTTPS=1 sam dumi",
+    "build": "father-build",
     "release": "standard-version -r patch",
     "beta": "standard-version --skip.tag --prerelease beta",
     "alpha": "standard-version --skip.tag --prerelease alpha",

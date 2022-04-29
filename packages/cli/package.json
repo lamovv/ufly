@@ -30,7 +30,8 @@
   },
   "scripts": {
     "debug": "node --inspect-brk ./lib/cmd/init.js",
-    "link": "npm link --no-package-lock"
+    "link": "npm link --no-package-lock",
+    "sync": "npx cnpm sync"
   },
   "bugs": {
     "url": "https://github.com/lamovv/ufly/issues"

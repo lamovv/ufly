@@ -16,7 +16,7 @@ $ npm i -g @ufly/cli yarn
 $ ufly -h
 
 // 创建项目前配置一下yarn包源，初始化安装依赖时会快很多，或使用 `yrm`/`nrm` 管理仓库源
-$ yarn config set registry https://registry.npm.taobao.org
+$ yarn config set registry https://registry.npmmirror.com
 
 //创建
 $ ufly init

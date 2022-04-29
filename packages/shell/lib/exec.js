@@ -11,7 +11,7 @@ exports.npmrun = async script =>
     // // 优化yarn源
     // const registry = sh.exec('yarn config get registry', {silent: true}).stdout;
     // if(registry == 'https://registry.npmjs.org/'){
-    //   sh.exec('yarn config set registry https://registry.npm.taobao.org/', {silent: true})
+    //   sh.exec('yarn config set registry https://registry.npmmirror.com', {silent: true})
     // }
 
     shell.exec(
