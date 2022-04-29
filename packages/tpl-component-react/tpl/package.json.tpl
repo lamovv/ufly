@@ -51,9 +51,8 @@
     "alpha": "standard-version --skip.tag --prerelease alpha",
     "postalpha": "npm publish --tag alpha",
     "postbeta": "npm publish --tag beta",
-    "postrelease": "git push --follow-tags origin master && cd dist && npm publish",
+    "postrelease": "git push --follow-tags origin master && npm publish",
     "clear": "sam clear",
-    "postpublish": "npx cnpm sync",
     "preinstall": "rm -rf dist node_modules",
     "postinstall": "husky install"
   },

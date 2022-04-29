@@ -80,8 +80,7 @@
     "build:demo": "cross-env NODE_ENV=production webpack --mode=production",
     "postalpha": "npm publish --tag alpha",
     "postbeta": "npm publish --tag beta",
-    "postrelease": "git push --follow-tags origin master && cd dist && npm publish",
-    "postpublish": "npx cnpm sync",
+    "postrelease": "git push --follow-tags origin master && npm publish",
     "preinstall": "rm -rf dist node_modules",
     "postinstall": "husky install"
   },
