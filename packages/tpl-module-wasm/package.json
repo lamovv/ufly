@@ -18,8 +18,7 @@
   },
   "files": [
     "lib",
-    "tpl",
-    "sh"
+    "tpl"
   ],
   "repository": {
     "type": "git",
