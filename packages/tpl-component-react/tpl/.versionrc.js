@@ -5,8 +5,7 @@ module.exports = {
     changelog: true
   },
   scripts: {
-    postbump: 'git add . -A',
-    postcommit: 'node git.js',
+    postbump: 'npx --no-install father-build',
   }
 }
 

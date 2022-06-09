@@ -80,10 +80,10 @@ module.exports = {
       if(initAnswer.isInit){
         spinner.start(`${chalk.magenta('正在安装依赖等初始化操作...\n')}`);
         const done = await sh.exec.npmrun('i -s').catch(e => {
-          spinner.fail(`${chalk.red(`安装依赖等初始化操作失败，请手动执行 ${chalk.yellow.bold('npm run init')} 完成`)}`);
+          spinner.fail(`${chalk.red(`安装依赖等初始化操作失败，需手动执行 ${chalk.yellow.bold('npm run init')} 完成`)}`);
         });
         if(done){
-          spinner.succeed(`${chalk.green(`${answers.name} ${pType} 已初始化完成，请执行 ${chalk.yellow.bold(' yarn dev ')} 进入开发`)}\n`);
+          spinner.succeed(`${chalk.green(`${answers.name} ${pType} 已初始化完成，${!isCurrent ? chalk.yellow.bold(` cd ${dirName} 进入项目，`): ''}执行 ${chalk.yellow.bold(' yarn dev ')} 进入开发`)}\n`);
         }
       }
     }

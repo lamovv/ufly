@@ -1,6 +1,6 @@
 {
   "name": "{{name}}",
-  "version": "{{version}}",
+  "version": "{{version}}-beta.0",
   "description": "> {{description}}",
   "keywords": [
     "{{keywords}}"

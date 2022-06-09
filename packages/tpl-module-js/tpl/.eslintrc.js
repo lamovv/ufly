@@ -1,14 +1,9 @@
 /**
- * eslint有三种使用方式
- * 【1】js代码中通过注释的方式使用
- * 【2】通过webpack的eslintConfig字段设置，eslint会自动搜索项目的package.json文件中的配置
- * 【3】通过配置文件的方式使用，配置文件有多种文件方式，如JavaScript、JSON 或者 YAML等
- *
+ * eslint
  * 文件忽略
  * 【】让eslint跳过特定文件的检测
  * 【】通过当前工作目录下 「.eslintignore」 文件进行设置
  *  其使用的是Glob路径书写方式，与「.gitignore」的使用方法相同
- * 【】也可以在 package.json 文件中，通过 eslintIgnore 参数进行设置
  *
  * 文件内局部设置
  * 【】eslint可以具体文件中设置特定代码的规则，常用于跳过某条语句的检测。
@@ -19,12 +14,11 @@
  * 【】在下一行禁用，// eslint-disable-next-line
  */
 module.exports = {
-  // 根目录标识
   root: true, // 标识当前配置文件为eslint的根配置文件，让其停止在父级目录中继续寻找
   extends: [
     'eslint:recommended',
   ],
-  parser: 'babel-eslint', //解析器
+  parser: '@babel/eslint-parser', //解析器
   parserOptions: {
     sourceType: 'module', //指定JS代码来源的类型，script(script标签引入？) | module（es6的module模块）
     // ecmaVersion: 6, //支持的ES语法版本，默认为5
@@ -70,7 +64,7 @@ module.exports = {
     'valid-jsdoc': 0,  // 强制使用有效的 JSDoc 注释
     'no-case-declarations': 1,
     'no-debugger': 1,  // 是否禁用 debugger
-    'no-console': 0,  // 是否禁用 console
+    'no-console': 1,  // 是否禁用 console
     'no-control-regex': 2,  // 禁止在正则表达式中使用控制字符
     'no-invalid-regexp': 2,  // 禁止 RegExp 构造函数中无效的正则表达式字符串
     'no-regex-spaces': 2,  // 禁止正则表达式字面量中出现多个空格
@@ -90,7 +84,7 @@ module.exports = {
     'no-invalid-this': 1,  // 禁止 this 关键字出现在类和类对象之外
     'no-undef': 2, // 禁用未声明的变量，除非在 global 配置中声明
     'no-use-before-define': 0, // 不允许在变量定义之前使用它们
-    'no-unused-vars': [1, {'vars': 'all', 'args': 'none'}],  // 禁止出现未使用过的变量
+    'no-unused-vars': [2, {'args': 'none'}],  // 禁止出现未使用过的变量，函数参数除外
     'array-bracket-spacing': [2,'never'], // 指定数组的元素之间要以空格隔开(, 后面)， never参数：[ 之前和 ] 之后不能带空格，always参数：[ 之前和 ] 之后必须带空格
     'brace-style': [2, '1tbs', {'allowSingleLine': true}],  // if while function 后面的{必须与if在同一行，java风格。
     'key-spacing': [2, {'beforeColon': false, 'afterColon': true}],  // 强制在对象字面量的属性中键和值之间使用一致的间距

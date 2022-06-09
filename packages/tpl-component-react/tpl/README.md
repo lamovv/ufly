@@ -1,3 +1,7 @@
+---
+sidemenu: true
+toc: content
+---
 # `{{scope}}{{name}}`
 
 > {{description}}
@@ -11,6 +15,8 @@ yarn add {{scope}}{{name}}
 ```
 
 ## 基础示例
+<code src="./demo/index.tsx"></code>
+<API src="./src/index.tsx"></API>
 
 ```jsx
 /**
@@ -45,8 +51,8 @@ export default function Page() {
     ```
 
 ## 发包
+- latest包：`$ yarn release`
 - alpha包：`$ yarn alpha`
 - beta包：`$ yarn beta`
-- release包：`$ yarn release`
-  - 同时，会打git tag并提交
+
 

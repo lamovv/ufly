@@ -43,7 +43,7 @@ fetch('/api/getData.json')
     ```
 
 ## 发包
+- latest包：`$ yarn release`
+  - 同时，会打git tag并提交
 - alpha包：`$ yarn alpha`
 - beta包：`$ yarn beta`
-- release包：`$ yarn release`
-  - 同时，会打git tag并提交

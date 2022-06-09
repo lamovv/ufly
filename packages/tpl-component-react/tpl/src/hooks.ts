@@ -1,5 +1,8 @@
-import type { ChangeEventHandler } from 'react';
+/**
+ * 自定义 hooks
+ */
 import { useState } from 'react';
+import { IOnChange } from './interface';
 
 export const useControl = (v: number) => {
   const [val, setVal] = useState(v);
@@ -13,7 +16,7 @@ export const useControl = (v: number) => {
   const onClear = () => {
     setVal(0);
   };
-  const onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+  const onChange: IOnChange = e => {
     setVal(Number(e.target.value));
   };
 

@@ -1,9 +1,8 @@
 node_modules
 dist
-**/.*
+.eslintcache
 !.husky
 .husky/_
-!.gitignore
 !*.js
 coverage
 .coveralls.yml

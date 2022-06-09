@@ -1,31 +1,34 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "es5",
-    "module": "esnext",
-    "lib":[
-      "es6",
-      "dom"
-    ],
-    "allowJs": true,
-    "checkJs": false,
-    "isolatedModules": false,
-    "noImplicitAny": false,
-    "sourceMap": true,
+    "target": "ES6",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowJs": false,
     "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "pretty": true,
+    "removeComments": true,
+    "downlevelIteration": true
     "declarationDir": "./dist",
     "rootDir": "./src",
     "outDir": "./dist",
-    "moduleResolution": "node",
-    "pretty": true,
-    "removeComments": true,
-    "downlevelIteration": true,
-    "esModuleInterop": true
+    "baseUrl": ".",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

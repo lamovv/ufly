@@ -10,6 +10,7 @@ const https = env.HTTPS;
 const cert = getCertPath();
 
 export default defineConfig({
+  logo: 'logo.png',
   // mfsu: {},
   //webpack5: {},
   fastRefresh: {},
