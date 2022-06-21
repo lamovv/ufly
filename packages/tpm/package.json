@@ -1,6 +1,6 @@
 {
   "name": "@ufly/tpm",
-  "version": "0.7.17",
+  "version": "0.7.18",
   "description": "> @ufly/cli，配套 tpl package manager",
   "author": "lamovv <lamovv@gmail.com>",
   "homepage": "https://github.com/lamovv/ufly#readme",
