@@ -5,11 +5,12 @@
 // // tplname : tpl-package
 let tplrc = {
   'component-react': '@ufly/tpl-component-react',
-  'module-js': '@ufly/tpl-module-js',
   'module-ts': '@ufly/tpl-module-ts',
+  'module-js': '@ufly/tpl-module-js',
   'module-wasm': '@ufly/tpl-module-wasm',
-  'project-h5(WebApp)': null,
-  'modules-lerna': null
+  'app-h5': null,
+  'app-pc': null,
+  'monorepo': null
 };
 // if (fs.pathExistsSync(tplPath)) {
 //   tplrc = fs.readJsonSync(tplPath);
