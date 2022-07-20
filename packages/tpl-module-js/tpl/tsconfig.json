@@ -1,12 +1,9 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "es5",
-    "module": "esnext",
-    "lib":[
-      "es6",
-      "dom"
-    ],
+    "target": "ES6",
+    "module": "ESNext",
+    "lib": ["es6", "dom"],
     "allowJs": true,
     "checkJs": false,
     "isolatedModules": false,
@@ -22,10 +19,6 @@
     "downlevelIteration": true,
     "esModuleInterop": true
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }

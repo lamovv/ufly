@@ -1,12 +1,12 @@
 # `@ufly/cli`
 
-> Use the ufly command line tool to quickly create modules and app for dev. module 开发项目（js/ts、AssemblyScript 2 Wasm）、基于 lerna 开发项目、App开发项目 的 cli，包括代码检查/格式修正、git commit规范校验、changelog自动生成，以及dev、build、push、pub等 cmd
+> Use the ufly command line tool to quickly create modules and app for dev. 
+> 创建 module（js/ts、AssemblyScript 2 Wasm）、Monorepo、webApp 的开发模板，完善的工作流保障，包括一键启动dev开发环境、代码规范检查与修正eslint/stylelint、代码格式化prettier、git规范校验、changelog生成，以及简捷的 npm包 发布命令等
 
 ![](./ufly.png)
 
 ## Usage
-@ufly/cli 脚本命令自动检测更新升级，目前支持创建基于JS、TS、AssemblyScript开发wasm 三语言的模块开发。将本地开发(dev)、npm包发布(pub)与代码管理(git)做到了简易命令化、规范化。同时，结合 git hook、prettier、eslint、commitlint等将代码格式化、校验、规范commit、记录changelog与发包版本处理等自动化。
-
+@ufly/cli 命令会自动检查更新、升级...
 
 全局安装
 

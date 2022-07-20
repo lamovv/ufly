@@ -1,5 +1,6 @@
 module.exports = {
   silent: true,
+  printError: true,
   tagPrefix: '',
   skip: {
     changelog: true

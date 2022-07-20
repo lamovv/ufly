@@ -5,6 +5,7 @@ module.exports = {
   bracketSpacing: true,
   jsxBracketSameLine: true,
   quoteProps: 'as-needed',
+  proseWrap: 'preserve',
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'es5',

@@ -4,12 +4,8 @@ const pkg = require('./package.json');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanBeforeHtmlWebpackPlugin = require('clean-before-html-webpack-plugin');
-const {
-  getCertPath
-} = require('@ali/sam');
-const {
-  env
-} = require('process');
+const { getCertPath } = require('@ufly/sam');
+const { env } = require('process');
 
 const https = env.HTTPS == 1;
 const cert = getCertPath();
@@ -19,7 +15,7 @@ module.exports = {
   // devtool: isProd ? 'cheap-module-source-map':'source-map', //cheap-module-eval-source-map
   devtool: 'source-map',
   entry: {
-    'demo/index': './demo/index.js'
+    'demo/index': './demo/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -55,14 +51,17 @@ module.exports = {
             options: {
               presets: ['@babel/preset-env'],
               plugins: [
-                ['@babel/plugin-transform-runtime', {
-                  // 开启后，关闭commonjs方式，以esm方式引入helpers函数
-                  // useESModules: true,  //默认false
-                }],
+                [
+                  '@babel/plugin-transform-runtime',
+                  {
+                    // 开启后，关闭commonjs方式，以esm方式引入helpers函数
+                    // useESModules: true,  //默认false
+                  },
+                ],
                 '@babel/plugin-syntax-dynamic-import',
                 '@babel/plugin-transform-modules-commonjs',
                 '@babel/plugin-proposal-object-rest-spread',
-                '@babel/plugin-proposal-class-properties'
+                '@babel/plugin-proposal-class-properties',
               ],
             },
           },
@@ -73,46 +72,46 @@ module.exports = {
         use: [
           isProd ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader',
-          'sass-loader'
-        ]
-      }
+          'sass-loader',
+        ],
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './demo/index.html',
       filename: '[name].html',
-      inject: 'body'
-    })
-  ].concat(isProd ? [
-    new CleanBeforeHtmlWebpackPlugin({
-      patterns: [{
-        match: '<script src="../dist/demo/index.js"></script>',
-        replacement: ''
-      }]
+      inject: 'body',
     }),
-    new MiniCssExtractPlugin()
-  ]:[]),
+  ].concat(
+    isProd
+      ? [
+          new CleanBeforeHtmlWebpackPlugin({
+            patterns: [
+              {
+                match: '<script src="../dist/demo/index.js"></script>',
+                replacement: '',
+              },
+            ],
+          }),
+          new MiniCssExtractPlugin(),
+        ]
+      : []
+  ),
   devServer: {
     // 融合Sam 配置
     allowedHosts: 'all',
-    server: {
-      type: `http${https ? 's':''}`,
-      options: {
-        ...cert
-      }
-    },
-    webSocketServer: 'ws',
+    https: https && cert,
     client: {
       webSocketURL: {
-        protocol: `ws${https?'s':''}`,
+        protocol: `ws${https ? 's' : ''}`,
         hostname: 'localhost',
-      }
+      },
     },
     static: {
       directory: path.join(__dirname, './mock'),
       publicPath: '/api',
-    }
+    },
   },
   resolve: {
     extensions: ['.js', '.ts', '.json'],
@@ -121,7 +120,7 @@ module.exports = {
     mainFields: ['module', 'main'],
     // mainFields: ['src', 'module', 'main'],
     alias: {
-      '{{scope}}{{name}}': path.resolve('./src/index')
-    }
-  }
+      '{{scope}}{{name}}': path.resolve('./src/index'),
+    },
+  },
 };

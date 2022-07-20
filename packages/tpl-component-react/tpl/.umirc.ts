@@ -1,7 +1,7 @@
 import { defineConfig } from 'umi';
 import {
   getCertPath
-} from '@ali/sam';
+} from '@ufly/sam';
 import {
   env
 } from 'process';

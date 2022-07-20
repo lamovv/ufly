@@ -9,31 +9,27 @@
     "url": "https://github.com/lamovv/ufly.git"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
-    "babel-eslint": "^10.1.0",
+    "@babel/eslint-parser": "^7.18.9",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "conventional-changelog-cli": "^2.1.1",
-    "eslint": "^7.23.0",
-    "esprima": "^4.0.1",
-    "husky": "^6.0.0",
+    "eslint": "^8.20.0",
+    "husky": "^8.0.1",
     "lerna": "^3.22.1",
     "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "prettier": "^2.7.1"
   },
   "scripts": {
-    "prepare": "husky install",
-    "i": "npm run clean && yarn install --ignore-scripts && lerna bootstrap --force-local && npm run prepare",
+    "postinstall": "husky install || true",
+    "i": "npm run clean && yarn install --ignore-scripts -s --force && lerna bootstrap --force-local",
     "clean": "rm -rf node_modules && lerna clean -y",
     "debug": "node --inspect packages/cli/bin/cli init",
     "debug:brk": "node --inspect-brk packages/cli/bin/cli init",
-    "upgrade": "yarn upgrade-interactive --latest",
     "linkcli": "cd packages/cli/ && yarn link --no-package-lock",
     "unlinkcli": "cd packages/cli/ && yarn unlink --no-package-lock",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "pub": "lerna publish",
     "pub:all": "lerna publish --force-publish",
     "pub:beta": "lerna publish --canary --preid beta",
-    "rebuild": "yarn install --force",
     "sync": "cd packages/cli/ && yarn sync"
   }
 }

@@ -15,8 +15,7 @@
     "publish": {
       "npmClient": "npm",
       "allowBranch": "master",
-      "verifyAccess": false,
-      "verifyRegistry": false,
+      "verifyAccess": true,
       "registry": "https://registry.npmjs.org"
     }
   }
