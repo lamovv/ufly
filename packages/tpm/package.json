@@ -1,6 +1,6 @@
 {
   "name": "@ufly/tpm",
-  "version": "0.7.18",
+  "version": "0.7.19",
   "description": "> @ufly/cli，配套 tpl package manager",
   "author": "lamovv <lamovv@gmail.com>",
   "homepage": "https://github.com/lamovv/ufly#readme",
@@ -24,10 +24,10 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "@ufly/tpl-component-react": "^0.7.17",
-    "@ufly/tpl-module-js": "^0.7.17",
-    "@ufly/tpl-module-ts": "^0.7.17",
-    "@ufly/tpl-module-wasm": "^0.7.17",
+    "@ufly/tpl-component-react": "^0.7.19",
+    "@ufly/tpl-module-js": "^0.7.19",
+    "@ufly/tpl-module-ts": "^0.7.19",
+    "@ufly/tpl-module-wasm": "^0.7.19",
     "fs-extra": "^9.1.0"
   },
   "publishConfig": {
