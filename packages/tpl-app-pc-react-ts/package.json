@@ -1,0 +1,40 @@
+{
+  "name": "@ufly/tpl-app-pc-react-ts",
+  "version": "0.7.19",
+  "description": "基于React的PC应用初始化模板，提供了完善的工程化服务，包括本地开发环境、工作流等",
+  "keywords": [
+    "pc",
+    "app",
+    "react",
+    "template",
+    "typescript"
+  ],
+  "author": "lamovv <lamovv@gmail.com>",
+  "homepage": "https://github.com/lamovv/ufly.git",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamovv/ufly.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/lamovv/ufly/issues"
+  },
+  "dependencies": {
+    "@ufly/util": "^0.7.12",
+    "async": "^3.2.4",
+    "fs-extra": "^10.1.0",
+    "handlebars": "^4.7.7",
+    "metalsmith": "^2.5.1"
+  }
+}

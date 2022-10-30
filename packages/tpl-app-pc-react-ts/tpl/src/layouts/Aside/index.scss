@@ -1,0 +1,85 @@
+.aside {
+  position: sticky;
+  top: 8px;
+  width: 230px;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 16px;
+
+  :global {
+    .ant-menu-item-selected {
+      color: #000;
+    }
+
+    .ant-modal-content {
+      box-sizing: border-box;
+      width: 370px;
+      height: 160px;
+    }
+
+    .ant-modal-close-x {
+      width: 30px;
+      height: 30px;
+      font-size: 12px;
+      line-height: 30px;
+    }
+
+    .ant-modal-confirm-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: none !important;
+    }
+
+    .ant-menu-inline > .ant-menu-item {
+      height: 48px;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 48px;
+    }
+
+    .ant-modal-confirm-btns .ant-btn {
+      width: 80px;
+      height: 32px;
+      font-size: 14px;
+      color: #fff;
+      background-color: #faad13;
+    }
+
+    .ant-modal-confirm .ant-modal-body {
+      padding: 40px 25px 0;
+    }
+
+    .ant-modal-confirm-body .ant-modal-confirm-content {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .ant-menu-inline .ant-menu-item::after {
+      right: auto !important;
+      left: 0 !important;
+      border-right: 8px solid #ffc900;
+    }
+
+    .ant-menu-item .ant-menu-item-icon + span {
+      margin-left: 14px;
+    }
+
+    .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background-color: #fff;
+    }
+
+    .ant-menu-inline.ant-menu-root .ant-menu-item {
+      padding-left: 28px !important;
+    }
+
+    .ant-menu-light .ant-menu-item:hover {
+      color: #000;
+      background-color: #f0f0f0;
+    }
+
+    .ant-menu-inline .ant-menu-item:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}

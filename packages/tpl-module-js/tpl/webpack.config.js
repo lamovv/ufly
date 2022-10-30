@@ -103,6 +103,7 @@ module.exports = {
     allowedHosts: 'all',
     https: https && cert,
     client: {
+      overlay: false,
       webSocketURL: {
         protocol: `ws${https ? 's' : ''}`,
         hostname: 'localhost',

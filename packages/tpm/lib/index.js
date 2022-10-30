@@ -9,8 +9,8 @@ let tplrc = {
   'module-js': '@ufly/tpl-module-js',
   'module-wasm': '@ufly/tpl-module-wasm',
   'app-h5': null,
-  'app-pc': null,
-  'monorepo': null
+  'app-pc-react-ts': '@ufly/tpl-app-pc-react-ts',
+  monorepo: null,
 };
 // if (fs.pathExistsSync(tplPath)) {
 //   tplrc = fs.readJsonSync(tplPath);

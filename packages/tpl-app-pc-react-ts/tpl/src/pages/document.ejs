@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <title>App</title>
+    <meta charset="UTF-8" />
+    <meta name="data-spm" content="191" />
+    <meta name="aplus-waiting" content="MAN" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  </head>
+
+  <body data-spm="23721050">
+    <noscript>您的浏览器不支持JavaScript!请开启后使用</noscript>
+
+    <div id="root">
+      <style>
+        .page-loading-wrap {
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .page-spin {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          font-size: 14px;
+          font-variant: tabular-nums;
+          line-height: 1.5;
+          list-style: none;
+          -webkit-font-feature-settings: 'tnum';
+          font-feature-settings: 'tnum';
+          position: absolute;
+          display: none;
+          color: #1890ff;
+          text-align: center;
+          vertical-align: middle;
+          opacity: 0;
+          transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+        }
+        .page-spin-spinning {
+          position: static;
+          display: inline-block;
+          opacity: 1;
+        }
+        .page-spin-dot {
+          position: relative;
+          display: inline-block;
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+        }
+        .page-spin-dot-item {
+          position: absolute;
+          display: block;
+          width: 9px;
+          height: 9px;
+          background-color: #faad14;
+          border-radius: 100%;
+          transform: scale(0.75);
+          transform-origin: 50% 50%;
+          opacity: 0.3;
+          animation: antSpinMove 1s infinite linear alternate;
+        }
+        .page-spin-dot-item:nth-child(1) {
+          top: 0;
+          left: 0;
+        }
+        .page-spin-dot-item:nth-child(2) {
+          top: 0;
+          right: 0;
+          -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+        }
+        .page-spin-dot-item:nth-child(3) {
+          right: 0;
+          bottom: 0;
+          animation-delay: 0.8s;
+        }
+        .page-spin-dot-item:nth-child(4) {
+          bottom: 0;
+          left: 0;
+          animation-delay: 1.2s;
+        }
+        .page-spin-dot-spin {
+          transform: rotate(45deg);
+          animation: antRotate 1.2s infinite linear;
+        }
+        .page-spin-lg .page-spin-dot {
+          font-size: 32px;
+          width: 32px;
+          height: 32px;
+        }
+        .page-spin-lg .page-spin-dot i {
+          width: 14px;
+          height: 14px;
+        }
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          .page-spin-blur {
+            background: #fff;
+            opacity: 0.5;
+          }
+        }
+        @-webkit-keyframes antSpinMove {
+          to {
+            opacity: 1;
+          }
+        }
+        @keyframes antSpinMove {
+          to {
+            opacity: 1;
+          }
+        }
+        @-webkit-keyframes antRotate {
+          to {
+            transform: rotate(405deg);
+          }
+        }
+        @keyframes antRotate {
+          to {
+            transform: rotate(405deg);
+          }
+        }
+      </style>
+      <div class="page-loading-wrap">
+        <div class="page-spin page-spin-lg page-spin-spinning">
+          <span class="page-spin-dot page-spin-dot-spin">
+            <i class="page-spin-dot-item"></i>
+            <i class="page-spin-dot-item"></i>
+            <i class="page-spin-dot-item"></i>
+            <i class="page-spin-dot-item"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

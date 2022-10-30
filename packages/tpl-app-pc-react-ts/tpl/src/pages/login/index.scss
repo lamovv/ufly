@@ -1,0 +1,33 @@
+.login {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .wrap {
+    position: relative;
+    width: 390px;
+    height: 260px;
+    padding: 30px 25px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 16px #434343;
+
+    input[type='number'] {
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        appearance: none;
+      }
+
+      appearance: textfield;
+    }
+
+    .toLogin {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

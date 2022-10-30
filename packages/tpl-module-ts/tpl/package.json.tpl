@@ -38,7 +38,7 @@
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
-    "@ufly/sam": "^1.0.9",
+    "@ufly/sam": "^1.0.15",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.1.0",

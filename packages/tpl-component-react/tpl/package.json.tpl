@@ -24,7 +24,7 @@
     "@commitlint/cz-commitlint": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
-    "@ufly/sam": "^1.0.9",
+    "@ufly/sam": "^1.0.15",
     "@umijs/fabric": "^2.11.1",
     "@umijs/plugin-sass": "^1.1.1",
     "babel-plugin-import": "^1.13.3",

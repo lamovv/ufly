@@ -1,0 +1,12 @@
+html,
+body {
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, 'MIcrosoft YaHei', tahoma,
+    arial, sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  background-color: #fcfcfc;
+}

@@ -1,0 +1,13 @@
+.footer {
+  font-size: 14px;
+  text-align: center;
+
+  .item {
+    padding: 0 10px;
+    border-right: 1px solid #eee;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

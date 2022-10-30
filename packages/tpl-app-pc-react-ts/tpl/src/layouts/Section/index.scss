@@ -1,0 +1,18 @@
+.msection {
+  display: flex;
+  width: 100%;
+
+  .scontent {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .saside {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 260px;
+    margin-top: 20px;
+    box-shadow: -1px 0 0 0 rgb(0 0 0 / 20%);
+  }
+}

@@ -1,0 +1,43 @@
+.container {
+  flex: 1;
+  margin: 30px 0 0 40px;
+  color: #333;
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .form {
+    margin-top: 20px;
+
+    div {
+      margin-bottom: 5px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .proFile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 140px;
+      height: 140px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      border-radius: 50%;
+    }
+  }
+}

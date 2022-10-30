@@ -1,0 +1,81 @@
+.headerWrapper {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1190px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.location {
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 18px;
+  color: #666;
+}
+
+.iphoneIcon {
+  width: 16px;
+  height: 16px;
+  transform: translateY(-3px);
+}
+
+.city {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.toolBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 18px 0;
+}
+
+.eyeImg {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.separate {
+  width: 1px;
+  height: 24px;
+  margin: 0 14px;
+  background-color: #e1e0e0;
+}
+
+.phone {
+  width: 88px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.toolimg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.distributor {
+  width: 120px;
+  height: 24px;
+  line-height: 24px;
+}
+
+:global(.ant-badge-count, ) {
+  right: 5px;
+}
