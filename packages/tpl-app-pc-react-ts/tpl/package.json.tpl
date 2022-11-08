@@ -22,7 +22,7 @@
     "url": "{{repository}}"
   },
   "devDependencies": {
-    "@ufly/wfc": "^1.0.2",
+    "@ufly/wfc": "^1.0.5",
     "@types/browser-update": "^3.3.0",
     "@types/js-cookie": "^3.0.2",
     "@types/react": "^17",

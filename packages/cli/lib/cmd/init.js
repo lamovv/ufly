@@ -85,6 +85,16 @@ module.exports = {
             )}\n`
           );
         }
+      } else {
+        spinner.succeed(
+          `${chalk.green(
+            `${answers.name} ${pType} 已创建完成，${
+              !isCurrent ? chalk.yellow.bold(` cd ${dirName} 进入项目，`) : ''
+            }执行 ${chalk.yellow.bold(' yarn install ')} 完成初始化，然后执行 ${chalk.yellow.bold(
+              ' yarn dev '
+            )} 进入开发`
+          )}\n`
+        );
       }
     }
   },

@@ -16,7 +16,7 @@ const getUser = _ => {
 
   return {
     author: name,
-    email
+    email,
   };
 };
 
@@ -36,5 +36,5 @@ module.exports = {
   getUser,
   getRepo,
   getConfig,
-  addRemote
+  addRemote,
 };

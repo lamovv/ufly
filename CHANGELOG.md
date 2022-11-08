@@ -1,3 +1,12 @@
+# [](https://github.com/lamovv/ufly/compare/v0.7.19...v) (2022-11-08)
+
+
+### Features
+
+* **tpl:** rappc ([f976b20](https://github.com/lamovv/ufly/commit/f976b2093613a33172f9fffcad780a535e26a29f))
+
+
+
 # [](https://github.com/lamovv/ufly/compare/v0.7.19...v) (2022-10-30)
 
 

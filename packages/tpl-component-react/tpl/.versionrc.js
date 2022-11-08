@@ -3,10 +3,9 @@ module.exports = {
   printError: true,
   tagPrefix: '',
   skip: {
-    changelog: true
+    changelog: true,
   },
   scripts: {
     postbump: 'npx --no-install father-build',
-  }
-}
-
+  },
+};

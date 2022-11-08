@@ -22,6 +22,7 @@
   },
   "scripts": {
     "postinstall": "husky install || true",
+    "bootstrap": "lerna bootstrap --force-local",
     "i": "npm run clean && yarn install --ignore-scripts -s --force && lerna bootstrap --force-local",
     "clean": "rm -rf node_modules && lerna clean -y",
     "debug": "node --inspect packages/cli/bin/cli init",

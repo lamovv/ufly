@@ -18,26 +18,6 @@ yarn add {{scope}}{{name}}
 <code src="./demo/index.tsx"></code>
 <API src="./src/index.tsx"></API>
 
-```jsx
-/**
- * transform: true
- * defaultShowCode: true
- */
-import React from 'react';
-import {{comName}} from '{{scope}}{{name}}';
-
-export default function Page() {
-  return (
-    <div>
-      <{{comName}}
-        text="基础示例"
-        defaultValue={1}
-      />
-    </div>
-  );
-}
-```
-
 ## 开发步骤
 1. 安装依赖
 

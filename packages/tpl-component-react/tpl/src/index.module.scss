@@ -1,9 +1,17 @@
+.counter {
+  display: flex;
+}
+
 .text {
   color: #18e;
 }
+
 .title {
-  font-size: 20px;
+  width: 60px;
+  font-size: 14px;
+  text-align: right;
 }
+
 .button {
   min-width: 22px;
   margin: 0 3px;

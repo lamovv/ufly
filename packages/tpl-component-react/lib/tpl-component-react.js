@@ -9,7 +9,7 @@ async function tplModule(data, options = {}) {
   await processTpls(
     Object.assign(
       {
-        date: util.date('Y/m/d H:i')
+        date: util.date('Y/m/d H:i'),
       },
       data,
       options
