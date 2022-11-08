@@ -1,6 +1,6 @@
 {
   "name": "@ufly/tpl-app-pc-react-ts",
-  "version": "0.7.21",
+  "version": "0.7.22",
   "description": "基于React的PC应用初始化模板，提供了完善的工程化服务，包括本地开发环境、工作流等",
   "keywords": [
     "pc",
@@ -31,7 +31,7 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
-    "@ufly/util": "^0.7.12",
+    "@ufly/util": "^0.7.22",
     "async": "^3.2.4",
     "fs-extra": "^10.1.0",
     "handlebars": "^4.7.7",

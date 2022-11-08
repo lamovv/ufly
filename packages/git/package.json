@@ -1,6 +1,6 @@
 {
   "name": "@ufly/git",
-  "version": "0.7.20",
+  "version": "0.7.22",
   "description": "> @ufly/cli，配套 git 工具包",
   "keywords": [
     "git",
