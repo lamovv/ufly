@@ -3,16 +3,15 @@ import styles from './index.scss';
 function Footer() {
   return (
     <div className={styles.footer}>
-      <span className={styles.item}>阿信</span>
-      <span className={styles.item}>杭州网络科技有限公司</span>
+      <span className={styles.item}>Demo 科技有限公司</span>
 
       <span className={styles.item}>
         ICP证：
-        <a href="https://beian.miit.gov.cn/" target="_blank" style={{ marginRight: '10px' }} rel="noreferrer">
-          浙B2-20220188
+        <a href="/" target="_blank" style={{ marginRight: '10px' }} rel="noreferrer">
+          测A2-12345678
         </a>
-        <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noreferrer">
-          浙ICP备2021010883号-1
+        <a href="/" target="_blank" rel="noreferrer">
+          测ICP备12345678号-1
         </a>
       </span>
     </div>
