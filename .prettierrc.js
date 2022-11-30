@@ -1,13 +1,14 @@
 module.exports = {
-  root: true,
+  semi: true,
   arrowParens: 'avoid',
   bracketSpacing: true,
   jsxBracketSameLine: false,
+  jsxSingleQuote: true,
+  proseWrap: 'never',
   printWidth: 120,
-  proseWrap: 'preserve',
-  quoteProps: 'as-needed', // object对象中key值是否加引号
+  quoteProps: 'as-needed',
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'es5',
-  endOfLine: 'lf'
+  endOfLine: 'lf',
 };

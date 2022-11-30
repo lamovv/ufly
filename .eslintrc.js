@@ -55,7 +55,11 @@ module.exports = {
     'key-spacing': [2, { beforeColon: false, afterColon: true }], // 强制在对象字面量的属性中键和值之间使用一致的间距
     'max-nested-callbacks': [1, 5], // 强制回调函数最大嵌套深度 5层
     'no-spaced-func': 2, // 禁止 function 标识符和括号之间出现空格
-    indent: [2, 2], // 规范缩进
+    indent: [2, 2, {
+      ignoredNodes: ['ConditionalExpression'],
+      VariableDeclarator: 'first',
+      MemberExpression: 1,
+    }], // 规范缩进
     quotes: [2, 'single', 'avoid-escape'], // 强制使用一致的反勾号、双引号或单引号
     // "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],  // 规范一元运算符，只在循环中使用
   },
