@@ -1,6 +1,6 @@
 {
   "name": "@ufly/wpk-cfg",
-  "version": "0.7.22",
+  "version": "0.7.23",
   "description": "webpack5 config core",
   "keywords": [
     "webpack5",
