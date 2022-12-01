@@ -23,8 +23,9 @@ config.target('web').mode('production').devtool('source-map');
 // entry
 function getEntry() {
   let entries = {};
-  glob.sync(['./src/pages/**/index.[tj]sx', './src/index.[tj]sx', './src/main.[tj]sx']).forEach(name => {
-    let matches = name?.match(/\.\/src\/(.+?)(?:\.[tj]sx)$/i);
+  glob.sync(['./src/pages/*/index.[tj]s?(x)', './src/index.[tj]sx', './src/main.[tj]sx']).forEach(name => {
+    let matches = name?.match(/\.\/src\/(.+?)(?:\.[tj]sx?)$/i);
+
     if (matches) {
       entries[matches[1]] = name;
     }
@@ -187,7 +188,7 @@ if (isProduction) {
     .end()
     .end()
 
-    .optimization// css uglify 方式一
+    .optimization // css uglify 方式一
     .when(cssMinimizer === 'css', optimization => {
       optimization.minimizer('css').use(CssMinimizerPlugin);
     })

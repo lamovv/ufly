@@ -3,5 +3,5 @@
 const uflyCli = require('..');
 
 describe('@ufly/cli', () => {
-    it('needs tests');
+  it('needs tests');
 });

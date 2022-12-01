@@ -46,7 +46,7 @@ module.exports = config;
     "dev": "webpack serve",
     "build": "cross-env NODE_ENV=production webpack --mode=production",
     
-    "dev": "cross-env CSS_MINIMIZER=css COMPILE=babel sam webpack serve",
+    "dev": "cross-env CSS_MINIMIZER=css COMPILE=babel webpack serve",
     "build": "cross-env NODE_ENV=production CSS_MINIMIZER=css COMPILE=babel webpack --mode=production",
   }
 }

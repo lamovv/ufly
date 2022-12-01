@@ -1,6 +1,6 @@
 'use strict';
 
-const wpkCfgCore = require('..');
+const { mainChain } = require('../lib/index');
 
 describe('wpk-cfg', () => {
   it('needs tests');

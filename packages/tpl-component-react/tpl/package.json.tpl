@@ -19,7 +19,7 @@
     "url": "{{repository}}"
   },
   "devDependencies": {
-    "@ufly/wfc": "^1.0.5",
+    "@ufly/wfc": "^1.0.9",
     "@types/react": ">=17",
     "@umijs/fabric": "^3.0.0",
     "@umijs/plugin-sass": "^1.1.1",
