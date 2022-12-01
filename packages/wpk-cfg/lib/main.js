@@ -98,6 +98,7 @@ config.output
   .loader('css-loader')
   .end()
   .end()
+
   .rule('sass')
   .test(/\.(sa|sc)ss$/i)
   // .include.add(src).end()
@@ -111,6 +112,7 @@ config.output
   .loader('sass-loader')
   .end()
   .end()
+
   .rule('less')
   .test(/\.less$/i)
   // .include.add(src).end()
