@@ -1,3 +1,7 @@
+# [](https://github.com/lamovv/ufly/compare/v0.7.25...v) (2022-12-05)
+
+
+
 # [](https://github.com/lamovv/ufly/compare/v0.7.24...v) (2022-12-01)
 
 

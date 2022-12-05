@@ -27,7 +27,11 @@ if (!isProduction) {
         warnings: false,
       },
     })
-    .set('static', [{ directory: join(process.cwd(), 'public') }, { directory: join(process.cwd(), 'build') }])
+    .set('static', [
+      { directory: join(process.cwd(), 'dist') },
+      { directory: join(process.cwd(), 'build') },
+      { directory: join(process.cwd(), 'public') },
+    ])
     .end()
 
     .module.when(compile === 'babel', module => {
