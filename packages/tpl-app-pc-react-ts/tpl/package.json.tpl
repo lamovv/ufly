@@ -26,6 +26,7 @@
     "@types/browser-update": "^3.3.0",
     "@types/js-cookie": "^3.0.2",
     "@types/react": "^17",
+    "react-dev-inspector": "^1.6.0",
     "antd-dayjs-webpack-plugin": "^1.0.6",
     "babel-plugin-import": "^1.13.3",
     "koa": "^2.13.4",
