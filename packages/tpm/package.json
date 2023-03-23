@@ -24,6 +24,7 @@
     "url": "https://github.com/lamovv/ufly/issues"
   },
   "dependencies": {
+    "@ufly/tpl-app-pc-react-ts": "^0.7.24",
     "@ufly/tpl-component-react": "^0.7.26",
     "@ufly/tpl-module-js": "^0.7.22",
     "@ufly/tpl-module-ts": "^0.7.22",
