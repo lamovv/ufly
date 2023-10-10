@@ -1,6 +1,6 @@
 {
   "name": "@ufly/cli",
-  "version": "0.7.27",
+  "version": "0.7.28",
   "description": "> Use the ufly command line tools to quickly create a dev env for modules and app.",
   "bin": {
     "ufly": "bin/cli"
@@ -38,9 +38,9 @@
   },
   "dependencies": {
     "@ufly/git": "^0.7.22",
-    "@ufly/inquirer": "^0.7.22",
+    "@ufly/inquirer": "^0.7.28",
     "@ufly/shell": "^0.7.22",
-    "@ufly/tpm": "^0.7.27",
+    "@ufly/tpm": "^0.7.28",
     "chalk": "~4.1.0",
     "figlet": "^1.3.0",
     "fs-extra": "~9.1.0",
