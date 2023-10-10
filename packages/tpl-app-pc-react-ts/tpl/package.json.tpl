@@ -34,7 +34,6 @@
   },
   "resolutions": {
     "umi": ">=4",
-    "@umijs/preset-umi": "4.0.24",
     "postcss-scss": "^3"
   },
   "dependencies": {
