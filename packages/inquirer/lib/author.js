@@ -30,7 +30,7 @@ function setting() {
       default: author || '',
       when(answers) {
         return !author;
-      }
+      },
     },
     {
       type: 'input',
@@ -39,15 +39,15 @@ function setting() {
       default: email || '',
       when(answers) {
         return !email;
-      }
-    }
+      },
+    },
   ];
 
   return inquirer.prompt(options).then(answers => {
     const userInfo = Object.assign(
       {
         author,
-        email
+        email,
       },
       answers
     );
