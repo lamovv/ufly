@@ -10,7 +10,11 @@ const tmpPath = path.join(os.homedir(), '.ufly/.prorc');
 function setting(tpls, type) {
   let cache = {};
   if (fs.pathExistsSync(tmpPath)) {
-    cache = fs.readJsonSync(tmpPath);
+    try {
+      cache = fs.readJsonSync(tmpPath);
+    } catch (e) {
+      cache = {};
+    }
   }
   const repository = getRepo();
   if (repository) {
@@ -25,7 +29,7 @@ function setting(tpls, type) {
     {
       type: 'confirm',
       name: 'isCurrent',
-      message: '在当前目录创建：'
+      message: '在当前目录创建：',
     },
     {
       type: 'input',
@@ -41,7 +45,7 @@ function setting(tpls, type) {
       // 当 isCurrent 为 false 时增加目录创建
       when(answers) {
         return !answers.isCurrent;
-      }
+      },
     },
     {
       type: 'rawlist',
@@ -53,7 +57,7 @@ function setting(tpls, type) {
           return `${input} 暂不支持，建设中...请选择其他项创建`;
         }
         return true;
-      }
+      },
     },
     {
       type: 'input',
@@ -69,7 +73,7 @@ function setting(tpls, type) {
       },
       when(answers) {
         return /^module|component/.test(answers.projectType);
-      }
+      },
     },
     {
       type: 'input',
@@ -81,42 +85,42 @@ function setting(tpls, type) {
           return '指定应用或组件模块名';
         }
         return true;
-      }
+      },
     },
     {
       type: 'input',
       name: 'description',
       default: cache.description || '> description',
-      message: '简要描述：'
+      message: '简要描述：',
     },
     {
       type: 'input',
       name: 'keywords',
       default: cache.keywords || '',
-      message: '关键字'
+      message: '关键字',
     },
     {
       type: 'list',
       name: 'version',
       default: cache.version || '',
       message: '起始版本号',
-      choices: ['1.0.0', '0.1.0', '0.0.1']
+      choices: ['1.0.0', '0.1.0', '0.0.1'],
     },
     {
       type: 'input',
       name: 'repository',
       default: cache.repository || '',
-      message: '仓库地址〔git〕'
-    }
+      message: '仓库地址〔git〕',
+    },
   ];
 
   return inquirer.prompt(options).then(answers => {
-    fs.outputJson(tmpPath, answers);
+    fs.outputJson(tmpPath, answers || {});
 
     if (isdef) {
       return Object.assign(
         {
-          projectType: type
+          projectType: type,
         },
         answers
       );
